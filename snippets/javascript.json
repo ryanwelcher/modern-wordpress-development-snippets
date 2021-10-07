@@ -1,0 +1,16 @@
+{
+  "getEntityRecords": {
+    "scope": "javascript",
+    "prefix": "hook",
+    "body": [
+      "import { useSelect } from \"@wordpress/data\";",
+      "const { data, isLoading } = useSelect((select) => {",
+      "    return {",
+      "        data: select('core').getEntityRecords('${1:entity}', '${2:type}', {${3}}),",
+      "        isLoading: select('core/data').isResolving('core', 'getEntityRecords', ['${1:entity}', '${2:type}', {${3}}])",
+      "     };",
+      "});"
+    ],
+    "description": ""
+  }
+}

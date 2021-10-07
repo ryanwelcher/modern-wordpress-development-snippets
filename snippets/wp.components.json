@@ -1,0 +1,48 @@
+{
+  "AlignmentMatrixControl": {
+    "scope": "javascript",
+    "prefix": ["wp.components", "AlignmentMatrixControl"],
+    "description": "AlignmentMatrixControl components enable adjustments to horizontal and vertical alignments for UI.",
+    "body": [
+      "$LINE_COMMENT Reference: https://github.com/WordPress/gutenberg/tree/trunk/packages/components/src/alignment-matrix-control",
+      "import { AlignmentMatrixControl } from '@wordpress/components';",
+      "",
+      "<AlignmentMatrixControl value={ alignment } onChange={ setAlignment } />",
+      "};"
+    ]
+  },
+  "AnglePickerControl": {
+    "scope": "javascript",
+    "prefix": ["wp.components", "AnglePickerControl"],
+    "description": "AnglePickerControl is a React component to render a UI that allows users to pick an angle. Users can choose an angle in a visual UI with the mouse by dragging an angle indicator inside a circle or by directly inserting the desired angle in a text field.",
+    "body": [
+      "$LINE_COMMENT Reference: https://github.com/WordPress/gutenberg/tree/trunk/packages/components/src/angle-picker-control",
+      "import { useState } from '@wordpress/element';",
+      "import { AnglePickerControl } from '@wordpress/components';",
+      "",
+      "const MyAnglePicker = () => {",
+      "    const [ angle, setAngle ] = useState();",
+      "    return <AnglePickerControl value={ angle } onChange={ setAngle } />;",
+      "}; "
+    ]
+  },
+  "Animate": {
+    "scope": "javascript",
+    "prefix": ["wp.components", "Animate"],
+    "description": "Simple interface to introduce animations to components.",
+    "body": [
+      "$LINE_COMMENT Reference: https://github.com/WordPress/gutenberg/tree/trunk/packages/components/src/animate",
+      "import { Animate } from '@wordpress/components';",
+      "",
+      "const MyAnimatedNotice = () => (",
+      "   <Animate type=\"slide-in\" options={ { origin: 'top' } }>",
+      "        { ( { className } ) => (",
+      "            <Notice className={ className } status=\"success\">",
+      "                <p>Animation finished.</p>",
+      "           </Notice>",
+      "       ) }",
+      "   </Animate>",
+      ");"
+    ]
+  }
+}

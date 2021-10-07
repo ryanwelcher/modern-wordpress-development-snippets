@@ -1,0 +1,32 @@
+{
+  "Insert block.json": {
+    "scope": "json",
+    "prefix": "block",
+    "description": "Generates the contents of a block.json file",
+    "body": [
+      "{",
+      "  \"apiVersion\": \"2\",",
+      "  \"name\": \"${1:example-name}\",",
+      "  \"title\": \"${2:Title}\",",
+      "  \"category\": \"${3:common}\",",
+      "  \"description\": \"${4:Description}\",",
+      "  \"text-domain\": \"${5:example-text-domain}\",",
+      "  \"icon\": \"${6:feedback}\",",
+      "  \"attributes\": {},",
+      "  \"keywords\": [],",
+      "  \"version\": \"${7:0.0.1}\",",
+      "  \"providesContext\": {},",
+      "  \"usesContext\": [],",
+      "  \"styles\": [],",
+      "  \"example\": {",
+      "    \"attributes\": {}",
+      "  },",
+      "  \"supports\": {},",
+      "  \"editorScript\": \"${8:file:./build/index.js}\",",
+      "  \"script\": \"${9:file:./build/script.js}\",",
+      "  \"editorStyle\": \"${10:file:./build/index.css}\",",
+      "  \"style\": \"${11:file:./build/index.css}\"",
+      "}"
+    ]
+  }
+}

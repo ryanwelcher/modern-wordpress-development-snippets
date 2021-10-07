@@ -1,0 +1,37 @@
+{
+  "name": "custom-block-development-snippets",
+  "displayName": "Gutenberg development snippets",
+  "description": "Snippets for working with WordPress and Gutenberg",
+  "publisher": "ryan-welcher",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.49.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "javascript",
+        "path": "./snippets/wp.data.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/wp.components.json"
+      },
+      {
+        "language": "php",
+        "path": "./snippets/php.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/javascript.json"
+      },
+      {
+        "language": "json",
+        "path": "./snippets/json.json"
+      }
+    ]
+  }
+}

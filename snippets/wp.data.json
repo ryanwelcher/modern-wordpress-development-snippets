@@ -1,0 +1,17 @@
+{
+  "createReduxStore": {
+    "prefix": ["wp.data", "redux store"],
+    "scope": "javascript",
+    "body": [
+      "import { createReduxStore } from '@wordpress/data';",
+      "",
+      "const store = createReduxStore( 'demo', {",
+      "    reducer: ( state = 'OK' ) => state,",
+      "    selectors: {",
+      "        getValue: ( state ) => state,",
+      "    },",
+      "} );"
+    ],
+    "description": "Creates a data store definition for the provided Redux store options containing properties describing reducer, actions, selectors, controls and resolvers."
+  }
+}
