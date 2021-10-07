@@ -1,7 +1,7 @@
 {
   "Insert block.json": {
     "scope": "json",
-    "prefix": "block",
+    "prefix": ["json","block"],
     "description": "Generates the contents of a block.json file",
     "body": [
       "{",

@@ -7,6 +7,9 @@
   "engines": {
     "vscode": "^1.49.0"
   },
+  "scripts": {
+    "generate": "node ./src/generate-snippets.js"
+  },
   "categories": [
     "Snippets"
   ],
@@ -33,5 +36,9 @@
         "path": "./snippets/json.json"
       }
     ]
+  },
+  "devDependencies": {
+    "glob": "^7.2.0",
+    "gray-matter": "^4.0.3"
   }
 }
