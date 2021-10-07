@@ -8,7 +8,8 @@
     "vscode": "^1.49.0"
   },
   "scripts": {
-    "generate": "node ./src/generate-snippets.js"
+    "generate": "node ./src/generate-snippets.js",
+    "lint:js": "eslint --ext .js src"
   },
   "categories": [
     "Snippets"
@@ -17,11 +18,11 @@
     "snippets": [
       {
         "language": "javascript",
-        "path": "./snippets/wp.data.json"
+        "path": "./snippets/data.json"
       },
       {
         "language": "javascript",
-        "path": "./snippets/wp.components.json"
+        "path": "./snippets/components.json"
       },
       {
         "language": "php",
@@ -38,6 +39,8 @@
     ]
   },
   "devDependencies": {
+    "@wordpress/eslint-plugin": "^9.1.2",
+    "eslint": "^7.32.0",
     "glob": "^7.2.0",
     "gray-matter": "^4.0.3"
   }

@@ -1,16 +1,50 @@
-const fs = require('fs');
-const path = require('path');
+const fs = require( 'fs' );
+const path = require( 'path' );
 const glob = require( 'glob' );
-const matter = require('gray-matter');
-const str = fs.readFileSync( path.join( __dirname, '../snippet-data/components/alignment-matrix-control.snip'), 'utf8');
+const matter = require( 'gray-matter' );
+const { SNIPPET_DATA_DIR, VSCODE_SNIPPETS_DIR } = require( './constants' );
 
-const { SNIPPET_DATA_DIR } = require('./constants');
-//console.log(matter(str));
+const snippetDirs = glob.sync( SNIPPET_DATA_DIR + '*' );
 
-const snippet_dirs = glob.sync(SNIPPET_DATA_DIR + '*');
+snippetDirs.map( async ( dir ) => {
+	const data = await getSnippetData( dir );
+	const snippetData = data.reduce( ( map, item ) => {
+		const { title, description, body, prefix } = item;
+		map[ title ] = {
+			prefix,
+			description,
+			body,
+		};
+		return map;
+	}, {} );
+	const content = JSON.stringify( snippetData, null, 2 );
 
-snippet_dirs.map( dir => {
-    console.log( path.basename( dir ) )
-
-    // fs.writeFile( path.join( __dirname, '../test/' + path.basename( file ) + '.json'), JSON.stringify({name:test}), ()=> {});
+	fs.writeFile(
+		path.join( VSCODE_SNIPPETS_DIR + path.basename( dir ) + '.json' ),
+		content,
+		( err ) => {
+			console.log( err );
+		}
+	);
 } );
+
+async function getSnippetData( dir ) {
+	const files = glob.sync( dir + '/*.snip' );
+	const snippets = files.map( ( file ) => {
+		const fileContent = fs.readFileSync( file, 'utf-8' );
+		const markdownData = matter( fileContent );
+		const {
+			content: originalContent,
+			data: { prefix: originalPrefix, ...restOfData },
+		} = markdownData;
+		const body = originalContent.trim().split( '\n' );
+		const prefix = originalPrefix.split( '|' );
+
+		return {
+			...restOfData,
+			prefix,
+			body,
+		};
+	} );
+	return snippets;
+}
