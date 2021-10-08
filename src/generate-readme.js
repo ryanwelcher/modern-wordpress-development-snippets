@@ -33,10 +33,12 @@ async function generateTOC() {
 	);
 	const content = data.reduce( ( markdown, { title, snippetData } ) => {
 		const snippets = snippetData.reduce(
-			( snippetTable, { title: snippetTitle, prefix, description } ) => {
-				return `${ snippetTable }| \`${ prefix }\` | ${ description } |\n`;
+			( snippetTable, { prefix, description } ) => {
+				return `${ snippetTable }| \`${ prefix.map(
+					( item ) => `\`${ item }\``
+				) }\` | ${ description } |\n`;
 			},
-			'| Snippet | Description |\n| --- | --- |\n'
+			'| Snippet(s) | Description |\n| --- | --- |\n'
 		);
 		return `${ markdown } ### ${ title }\n${ snippets }\n`;
 	}, '' );
