@@ -23,7 +23,9 @@ snippetDirs.map( async ( dir ) => {
 		path.join( VSCODE_SNIPPETS_DIR + path.basename( dir ) + '.json' ),
 		content,
 		( err ) => {
-			console.log( err );
+			if ( err ) {
+				console.log( err );
+			}
 		}
 	);
 } );
