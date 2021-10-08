@@ -1,0 +1,21 @@
+---
+title: Retrieve from the WordPress datastore
+prefix: wp|getEntityRecords|get-data
+description: Add getEntityRecords selector with isLoading and invalidateResolution.
+---
+
+import { useSelect, useDispatch } from '@wordpress/data';
+
+const { data, isLoading } = useSelect((select) => {
+	return {
+		data: select('core').getEntityRecords('${1:entity}', '${2:type}', {${3}}),
+		isLoading: select('core/data').isResolving('core', 'getEntityRecords', ['${1:entity}', '${2:type}', {${3}}]),
+	};
+});
+
+const { invalidateResolution } = useDispatch('core/data');
+
+$LINE_COMMENT Call this function when needed to re-trigger the getEntityRecords call.
+const reQuery = () => {
+	invalidateResolution('core', 'getEntityRecords', ['${1:entity}', '${2:type}', {${3}}]);
+};
