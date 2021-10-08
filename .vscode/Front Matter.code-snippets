@@ -1,0 +1,18 @@
+{
+	"Add new snippet": {
+		"prefix": "snip",
+		"body": [
+			"---",
+			"title: ${1:component}",
+			"prefix: ${2:wp|debug}",
+			"description: ${3:add description}",
+			"---",
+			"",
+			"\\$LINE_COMMENT @see ${4:reference-link}",
+			"",
+			"import { ${1:component} } from '@wordpress/${6:package-name}'",
+			"",
+			"${7:snippet}"
+		],
+	}
+}
