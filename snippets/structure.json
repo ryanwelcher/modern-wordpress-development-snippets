@@ -1,0 +1,60 @@
+{
+  "Block Edit component": {
+    "prefix": [
+      "block",
+      "edit"
+    ],
+    "description": "Create an Edit component for custom block development.",
+    "body": [
+      "/**",
+      " * React hook that is used to mark the block wrapper element.",
+      " * It provides all the necessary props like the class name.",
+      " *",
+      " * @see https://developer.wordpress.org/block-editor/packages/packages-block-editor/#useBlockProps",
+      " */",
+      "import { useBlockProps } from '@wordpress/block-editor';",
+      "",
+      "/**",
+      " * The save function defines the way in which the different attributes should",
+      " * be combined into the final markup, which is then serialized by the block",
+      " * editor into `post_content`.",
+      " *",
+      " * @see https://developer.wordpress.org/block-editor/developers/block-api/block-edit-save/#save",
+      " *",
+      " * @return {WPElement} Element to render.",
+      " */",
+      "export default function save() {",
+      "\treturn (",
+      "\t\t<p { ...useBlockProps.save() }>",
+      "\t\t\t<div>Save</div>",
+      "\t\t</p>",
+      "\t);",
+      "}"
+    ]
+  },
+  "Retrieve from the WordPress datastore": {
+    "prefix": [
+      "wp",
+      "getEntityRecords",
+      "get-data"
+    ],
+    "description": "Add getEntityRecords selector with isLoading and invalidateResolution.",
+    "body": [
+      "import { useSelect, useDispatch } from '@wordpress/data';",
+      "",
+      "const { data, isLoading } = useSelect((select) => {",
+      "\treturn {",
+      "\t\tdata: select('core').getEntityRecords('${1:entity}', '${2:type}', {${3}}),",
+      "\t\tisLoading: select('core/data').isResolving('core', 'getEntityRecords', ['${1:entity}', '${2:type}', {${3}}]),",
+      "\t};",
+      "});",
+      "",
+      "const { invalidateResolution } = useDispatch('core/data');",
+      "",
+      "$LINE_COMMENT Call this function when needed to re-trigger the getEntityRecords call.",
+      "const reQuery = () => {",
+      "\tinvalidateResolution('core', 'getEntityRecords', ['${1:entity}', '${2:type}', {${3}}]);",
+      "};"
+    ]
+  }
+}

@@ -37,6 +37,10 @@
         "path": "./snippets/javascript.json"
       },
       {
+        "language": "javascript",
+        "path": "./snippets/structure.json"
+      },
+      {
         "language": "json",
         "path": "./snippets/json.json"
       }
