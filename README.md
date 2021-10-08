@@ -1,6 +1,6 @@
 # Gutenberg Snippets
 
-VSCode snippets for [Gutenberg](https://wordpress.org/gutenberg/) development. This project was heavily inspired by [https://github.com/ItsJonQ/wordpress-components-snippets] and steals the same approach to managing and building the snippets.
+VSCode snippets for [Gutenberg](https://wordpress.org/gutenberg/) development. This project was heavily inspired by the [wordpress-components-snippets](https://github.com/ItsJonQ/wordpress-components-snippets) extension and steals the same approach to managing and building the snippets. Thanks to [Q](https://github.com/ItsJonQ/) for the groundwork!
 
 
 ## Development
