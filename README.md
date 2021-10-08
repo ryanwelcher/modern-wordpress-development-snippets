@@ -93,7 +93,7 @@ import { AlignmentMatrixControl } from '@wordpress/components';
 | Snippet | Description |
 | --- | --- |
 | `block,edit` | Create an Edit component for custom block development. |
-| `block,edit` | Create an Edit component for custom block development. |
+| `block,save` | Create a Save component for custom block development. |
 | `wp,getEntityRecords,get-data` | Add getEntityRecords selector with isLoading and invalidateResolution. |
 
 
