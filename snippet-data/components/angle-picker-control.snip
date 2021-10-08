@@ -1,0 +1,15 @@
+---
+title: AnglePickerControl
+prefix: wp.components|AnglePickerControl
+description: AnglePickerControl is a React component to render a UI that allows users to pick an angle. Users can choose an angle in a visual UI with the mouse by dragging an angle indicator inside a circle or by directly inserting the desired angle in a text field.
+---
+
+$LINE_COMMENT @see https://github.com/WordPress/gutenberg/tree/trunk/packages/components/src/angle-picker-control
+
+import { useState } from '@wordpress/element';
+import { AnglePickerControl } from '@wordpress/components';
+
+const MyAnglePicker = () => {
+	const [ angle, setAngle ] = useState();
+	return <AnglePickerControl value={ angle } onChange={ setAngle } />;
+};

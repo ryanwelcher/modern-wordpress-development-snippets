@@ -1,0 +1,19 @@
+---
+title: Animate
+prefix: wp.components|Animate
+description: Simple interface to introduce animations to components.
+---
+
+$LINE_COMMENT @see https://github.com/WordPress/gutenberg/tree/trunk/packages/components/src/animate
+
+import { Animate } from '@wordpress/components';
+
+const MyAnimatedNotice = () => (
+	<Animate type="slide-in" options={ { origin: 'top' } }>
+		{ ( { className } ) => (
+			<Notice className={ className } status="success">
+				<p>Animation finished.</p>
+			</Notice>
+		) }
+	</Animate>
+);
