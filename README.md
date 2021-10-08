@@ -64,37 +64,37 @@ import { AlignmentMatrixControl } from '@wordpress/components';
 <!-- SNIPPET-TOC -->
 <!-- This table was automatically generated -->
 ## Snippets
- # block-editor
+ ### block-editor
 | Snippet | Description |
 | --- | --- |
-| `RichText` | Inserts a RichText component. |
+| `richtext,text` | Inserts a RichText component. |
 
- # components
+ ### components
 | Snippet | Description |
 | --- | --- |
-| `Alignment Matrix Control` | AlignmentMatrixControl components enable adjustments to horizontal and vertical alignments for UI. |
-| `AnglePickerControl` | AnglePickerControl is a React component to render a UI that allows users to pick an angle. Users can choose an angle in a visual UI with the mouse by dragging an angle indicator inside a circle or by directly inserting the desired angle in a text field. |
-| `Animate` | Simple interface to introduce animations to components. |
-| `Autocomplete` | This component is used to provide autocompletion support for a child input component. |
-| `BaseControl` | BaseControl component is used to generate labels and help text for components handling user inputs. |
-| `ButtonGroup` | ButtonGroup can be used to group any related buttons together. To emphasize related buttons, a group should share a common container. |
+| `wp.components,AlignmentMatrixControl` | AlignmentMatrixControl components enable adjustments to horizontal and vertical alignments for UI. |
+| `wp.components,AnglePickerControl` | AnglePickerControl is a React component to render a UI that allows users to pick an angle. Users can choose an angle in a visual UI with the mouse by dragging an angle indicator inside a circle or by directly inserting the desired angle in a text field. |
+| `wp.components,Animate` | Simple interface to introduce animations to components. |
+| `wp.components,Autocomplete` | This component is used to provide autocompletion support for a child input component. |
+| `wp.components,BaseControl` | BaseControl component is used to generate labels and help text for components handling user inputs. |
+| `wp.components,ButtonGroup` | ButtonGroup can be used to group any related buttons together. To emphasize related buttons, a group should share a common container. |
 
- # json
+ ### json
 | Snippet | Description |
 | --- | --- |
-| `Generate block.json file` | Generates the contents of a block.json file |
+| `wp,json,block` | Generates the contents of a block.json file |
 
- # php
+ ### php
 | Snippet | Description |
 | --- | --- |
-| `Insert WordPress debug constants` | Inserts the WP_DEBUG and WP_DEBUG_LOG and other debug related constants. |
+| `wp,debug` | Inserts the WP_DEBUG and WP_DEBUG_LOG and other debug related constants. |
 
- # structure
+ ### structure
 | Snippet | Description |
 | --- | --- |
-| `Block Edit component` | Create an Edit component for custom block development. |
-| `Block Edit component` | Create an Edit component for custom block development. |
-| `Retrieve from the WordPress datastore` | Add getEntityRecords selector with isLoading and invalidateResolution. |
+| `block,edit` | Create an Edit component for custom block development. |
+| `block,edit` | Create an Edit component for custom block development. |
+| `wp,getEntityRecords,get-data` | Add getEntityRecords selector with isLoading and invalidateResolution. |
 
 
 <!-- /SNIPPET-TOC -->

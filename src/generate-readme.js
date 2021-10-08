@@ -33,12 +33,12 @@ async function generateTOC() {
 	);
 	const content = data.reduce( ( markdown, { title, snippetData } ) => {
 		const snippets = snippetData.reduce(
-			( snippetTable, { title: snippetTitle, description } ) => {
-				return `${ snippetTable }| \`${ snippetTitle }\` | ${ description } |\n`;
+			( snippetTable, { title: snippetTitle, prefix, description } ) => {
+				return `${ snippetTable }| \`${ prefix }\` | ${ description } |\n`;
 			},
 			'| Snippet | Description |\n| --- | --- |\n'
 		);
-		return `${ markdown } # ${ title }\n${ snippets }\n`;
+		return `${ markdown } ### ${ title }\n${ snippets }\n`;
 	}, '' );
 
 	const snippetTableContent = `
@@ -51,15 +51,6 @@ ${ TOKEN_END }
 	`;
 
 	return snippetTableContent.trim();
-}
-
-async function generateSnippetTable( dir ) {
-	const snippetData = await getSnippetData( dir );
-	const snippets = snippetData.reduce( ( markdown, snippet ) => {
-		const { title, description } = snippet;
-		return markdown + `* [${ title }](#${ title }) ${ description }\n`;
-	}, '' );
-	return snippets;
 }
 
 async function updateContentWithSnippetTable( content, snippetTableContent ) {
