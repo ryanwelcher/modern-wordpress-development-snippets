@@ -18,7 +18,7 @@ Once the file has been created, there is a custom snippet for the workspace that
 
 The .snip files use front-matter to store the data about the snippet
 
-Raw snippet file.
+Raw snippet file:
 ```plaintext
 ---
 title: Alignment Matrix Control
@@ -33,7 +33,7 @@ import { AlignmentMatrixControl } from '@wordpress/components';
 <AlignmentMatrixControl value={ alignment } onChange={ setAlignment } />
 ```
 
-Converts to in snippet file.:
+Converts to in snippet file:
 ```json
 "Alignment Matrix Control": {
     "prefix": [
