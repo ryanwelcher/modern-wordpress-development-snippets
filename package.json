@@ -25,6 +25,10 @@
         "path": "./snippets/components.json"
       },
       {
+        "language": "javascript",
+        "path": "./snippets/block-editor.json"
+      },
+      {
         "language": "php",
         "path": "./snippets/php.json"
       },

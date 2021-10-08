@@ -1,0 +1,21 @@
+{
+  "RichText": {
+    "prefix": [
+      "richtext",
+      "text"
+    ],
+    "description": "Inserts a RichText component.",
+    "body": [
+      "$LINE_COMMENT @see https://github.com/WordPress/gutenberg/blob/trunk/packages/block-editor/src/components/rich-text/README.md",
+      "",
+      "import { RichText } from '@wordpress/block-editor';",
+      "",
+      "<RichText",
+      "\ttagName=\"h2\"",
+      "\tclassName={ className }",
+      "\tvalue={ attributes.content }",
+      "\tonChange={ ( content ) => setAttributes( { content } ) }",
+      "/>"
+    ]
+  }
+}
