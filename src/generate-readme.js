@@ -1,4 +1,3 @@
-const { Console } = require( 'console' );
 const fs = require( 'fs' );
 const { basename } = require( 'path' );
 const { README_FILE } = require( './constants' );
@@ -13,13 +12,13 @@ const TOKEN_REGEX = /(\<\!-- SNIPPET-TOC --\>)([\s\S]*)(\<\!-- \/SNIPPET-TOC --\
 
 async function generateReadme() {
 	const content = fs.readFileSync( README_FILE, 'utf-8' );
-	const toc = await generateTOC();
+	const toc = await generateSnippetTables();
 	const enhancedContent = await updateContentWithSnippetTable( content, toc );
 
 	fs.writeFileSync( README_FILE, enhancedContent );
 }
 
-async function generateTOC() {
+async function generateSnippetTables() {
 	const dirs = await getSnippetDirectories();
 	const data = await Promise.all(
 		dirs.map( async ( dir ) => {
