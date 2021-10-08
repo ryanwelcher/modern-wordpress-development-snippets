@@ -48,4 +48,13 @@ Converts to:
     ]
 },
 ```
+
+Inserted Snippet:
+```jsx
+// Reference: https://github.com/WordPress/gutenberg/tree/trunk/packages/components/src/alignment-matrix-control",
+
+import { AlignmentMatrixControl } from '@wordpress/components';
+
+<AlignmentMatrixControl value={ alignment } onChange={ setAlignment } />
+```
 Note that the prefix is pipe-delimited and is converted to an array in the json.
