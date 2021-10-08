@@ -16,7 +16,9 @@ To add a new snippet to any category, create a new file called {snippet}.snip. P
 
 Once the file has been created, there is a custom snippet for the workspace that will automatically add the snippet to the snippet file. Trigger it by typing `snip` in the new file. Please use this scaffold as a starting point to keep the format consistent.
 
-The .snip files use front-matter to store the data about the snippet:
+The .snip files use front-matter to store the data about the snippet
+
+Raw snippet file.
 ```plaintext
 ---
 title: Alignment Matrix Control
@@ -31,7 +33,7 @@ import { AlignmentMatrixControl } from '@wordpress/components';
 <AlignmentMatrixControl value={ alignment } onChange={ setAlignment } />
 ```
 
-Converts to:
+Converts to in snippet file.:
 ```json
 "Alignment Matrix Control": {
     "prefix": [
@@ -48,6 +50,8 @@ Converts to:
     ]
 },
 ```
+Note that the prefix is pipe-delimited and is converted to an array in the json.
+
 
 Inserted Snippet:
 ```jsx
@@ -57,4 +61,4 @@ import { AlignmentMatrixControl } from '@wordpress/components';
 
 <AlignmentMatrixControl value={ alignment } onChange={ setAlignment } />
 ```
-Note that the prefix is pipe-delimited and is converted to an array in the json.
+
