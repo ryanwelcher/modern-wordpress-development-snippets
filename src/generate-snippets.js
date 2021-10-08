@@ -4,31 +4,32 @@ const glob = require( 'glob' );
 const matter = require( 'gray-matter' );
 const { SNIPPET_DATA_DIR, VSCODE_SNIPPETS_DIR } = require( './constants' );
 
-const snippetDirs = glob.sync( SNIPPET_DATA_DIR + '*' );
+async function generateSnippets() {
+	const snippetDirs = await getSnippetDirectories();
+	snippetDirs.map( async ( dir ) => {
+		const data = await getSnippetData( dir );
+		const snippetData = data.reduce( ( map, item ) => {
+			const { title, description, body, prefix } = item;
+			map[ title ] = {
+				prefix,
+				description,
+				body,
+			};
+			return map;
+		}, {} );
+		const content = JSON.stringify( snippetData, null, 2 );
 
-snippetDirs.map( async ( dir ) => {
-	const data = await getSnippetData( dir );
-	const snippetData = data.reduce( ( map, item ) => {
-		const { title, description, body, prefix } = item;
-		map[ title ] = {
-			prefix,
-			description,
-			body,
-		};
-		return map;
-	}, {} );
-	const content = JSON.stringify( snippetData, null, 2 );
-
-	fs.writeFile(
-		path.join( VSCODE_SNIPPETS_DIR + path.basename( dir ) + '.json' ),
-		content,
-		( err ) => {
-			if ( err ) {
-				console.log( err );
+		fs.writeFile(
+			path.join( VSCODE_SNIPPETS_DIR + path.basename( dir ) + '.json' ),
+			content,
+			( err ) => {
+				if ( err ) {
+					console.log( err );
+				}
 			}
-		}
-	);
-} );
+		);
+	} );
+}
 
 async function getSnippetData( dir ) {
 	const files = glob.sync( dir + '/*.snip' );
@@ -50,3 +51,11 @@ async function getSnippetData( dir ) {
 	} );
 	return snippets;
 }
+
+async function getSnippetDirectories() {
+	return glob.sync( SNIPPET_DATA_DIR + '*' );
+}
+exports.getSnippetDirectories = getSnippetDirectories;
+exports.getSnippetData = getSnippetData;
+
+generateSnippets();

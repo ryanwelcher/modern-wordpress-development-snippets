@@ -61,4 +61,40 @@ import { AlignmentMatrixControl } from '@wordpress/components';
 
 <AlignmentMatrixControl value={ alignment } onChange={ setAlignment } />
 ```
+<!-- SNIPPET-TOC -->
+<!-- This table was automatically generated -->
+## Snippets
+ # block-editor
+| Snippet | Description |
+| --- | --- |
+| `RichText` | Inserts a RichText component. |
 
+ # components
+| Snippet | Description |
+| --- | --- |
+| `Alignment Matrix Control` | AlignmentMatrixControl components enable adjustments to horizontal and vertical alignments for UI. |
+| `AnglePickerControl` | AnglePickerControl is a React component to render a UI that allows users to pick an angle. Users can choose an angle in a visual UI with the mouse by dragging an angle indicator inside a circle or by directly inserting the desired angle in a text field. |
+| `Animate` | Simple interface to introduce animations to components. |
+| `Autocomplete` | This component is used to provide autocompletion support for a child input component. |
+| `BaseControl` | BaseControl component is used to generate labels and help text for components handling user inputs. |
+| `ButtonGroup` | ButtonGroup can be used to group any related buttons together. To emphasize related buttons, a group should share a common container. |
+
+ # json
+| Snippet | Description |
+| --- | --- |
+| `Generate block.json file` | Generates the contents of a block.json file |
+
+ # php
+| Snippet | Description |
+| --- | --- |
+| `Insert WordPress debug constants` | Inserts the WP_DEBUG and WP_DEBUG_LOG and other debug related constants. |
+
+ # structure
+| Snippet | Description |
+| --- | --- |
+| `Block Edit component` | Create an Edit component for custom block development. |
+| `Block Edit component` | Create an Edit component for custom block development. |
+| `Retrieve from the WordPress datastore` | Add getEntityRecords selector with isLoading and invalidateResolution. |
+
+
+<!-- /SNIPPET-TOC -->

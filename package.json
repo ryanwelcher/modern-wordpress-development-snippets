@@ -9,6 +9,7 @@
   },
   "scripts": {
     "generate": "node ./src/generate-snippets.js",
+    "generate:readme": "node ./src/generate-readme.js",
     "lint:js": "eslint --ext .js src"
   },
   "categories": [
