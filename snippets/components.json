@@ -2,6 +2,7 @@
   "Alignment Matrix Control": {
     "prefix": [
       "wp.components",
+      "components",
       "AlignmentMatrixControl"
     ],
     "description": "AlignmentMatrixControl components enable adjustments to horizontal and vertical alignments for UI.",
@@ -16,6 +17,7 @@
   "AnglePickerControl": {
     "prefix": [
       "wp.components",
+      "components",
       "AnglePickerControl"
     ],
     "description": "AnglePickerControl is a React component to render a UI that allows users to pick an angle. Users can choose an angle in a visual UI with the mouse by dragging an angle indicator inside a circle or by directly inserting the desired angle in a text field.",
@@ -34,6 +36,7 @@
   "Animate": {
     "prefix": [
       "wp.components",
+      "components",
       "Animate"
     ],
     "description": "Simple interface to introduce animations to components.",
@@ -56,6 +59,7 @@
   "Autocomplete": {
     "prefix": [
       "wp.components",
+      "components",
       "Autocomplete"
     ],
     "description": "This component is used to provide autocompletion support for a child input component.",
@@ -117,6 +121,7 @@
   "BaseControl": {
     "prefix": [
       "wp.components",
+      "components",
       "BaseControl"
     ],
     "description": "BaseControl component is used to generate labels and help text for components handling user inputs.",
@@ -135,6 +140,7 @@
   "ButtonGroup": {
     "prefix": [
       "wp.components",
+      "components",
       "ButtonGroup"
     ],
     "description": "ButtonGroup can be used to group any related buttons together. To emphasize related buttons, a group should share a common container.",
