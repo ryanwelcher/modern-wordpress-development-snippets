@@ -1,0 +1,34 @@
+---
+title: Guide
+prefix: wp.components|components|Guide
+description: Guide is a React component that renders a user guide in a modal.
+---
+
+$LINE_COMMENT @see https://github.com/WordPress/gutenberg/tree/trunk/packages/components/src/guide
+
+function MyTutorial() {
+	const [ isOpen, setIsOpen ] = useState( true );
+
+	if ( ! isOpen ) {
+		return null;
+	}
+
+	return (
+		<Guide
+			onFinish={ () => setIsOpen( false ) }
+			pages={ [
+				{
+					content: <p>Welcome to the ACME Store!</p>,
+				},
+				{
+					image: <img src="https://acmestore.com/add-to-cart.png" />,
+					content: (
+						<p>
+							Click <i>Add to Cart</i> to buy a product.
+						</p>
+					),
+				},
+			] }
+		/>
+	);
+}

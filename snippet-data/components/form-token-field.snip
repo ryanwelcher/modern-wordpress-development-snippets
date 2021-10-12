@@ -1,0 +1,31 @@
+---
+title: FormTokenField
+prefix: wp.components|components|FormTokenField
+description: A FormTokenField is a field similar to the tags and categories fields in the interim editor chrome, or the "to" field in Mail on OS X. Tokens can be entered by typing them or selecting them from a list of suggested tokens.
+---
+
+$LINE_COMMENT @see https://github.com/WordPress/gutenberg/tree/trunk/packages/components/src/form-token-field
+
+import { FormTokenField } from '@wordpress/components';
+import { useState } from '@wordpress/element';
+
+const continents = [
+	'Africa',
+	'America',
+	'Antarctica',
+	'Asia',
+	'Europe',
+	'Oceania',
+];
+
+const MyFormTokenField = () => {
+	const [ selectedContinents, setSelectedContinents ] = useState( [] );
+
+	return(
+		<FormTokenField
+			value={ selectedContinents }
+			suggestions={ continents }
+			onChange={ ( tokens ) => setSelectedContinents( tokens ) }
+		/>
+	);
+};

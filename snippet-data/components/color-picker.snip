@@ -1,0 +1,21 @@
+---
+title: ColorPicker
+prefix: wp.components|components|ColorPicker
+description: ColorPicker is a color picking component based on react-colorful. It lets you pick a color visually or by manipulating the individual RGB(A), HSL(A) and Hex(8) color values.
+---
+
+$LINE_COMMENT @see https://github.com/WordPress/gutenberg/tree/trunk/packages/components/src/color-picker
+
+import { ColorPicker } from '@wordpress/components/ui';
+
+function Example() {
+	const [color, setColor] = useState();
+	return (
+		<ColorPicker
+			color={color}
+			onChange={setColor}
+			enableAlpha
+			defaultValue="#000"
+		/>
+	);
+}

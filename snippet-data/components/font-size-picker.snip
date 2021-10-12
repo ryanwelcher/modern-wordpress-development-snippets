@@ -1,0 +1,44 @@
+---
+title: FontSizePicker
+prefix: wp.components|components|FontSizePicker
+description: FontSizePicker is a React component that renders a UI that allows users to select a font size
+---
+
+$LINE_COMMENT @see https://github.com/WordPress/gutenberg/tree/trunk/packages/components/src/font-size-picker
+
+import { FontSizePicker } from '@wordpress/components';
+import { useState } from '@wordpress/element';
+import { __ } from '@wordpress/i18n';
+
+const fontSizes = [
+	{
+		name: __( 'Small' ),
+		slug: 'small',
+		size: 12,
+	},
+	{
+		name: __( 'Big' ),
+		slug: 'big',
+		size: 26,
+	},
+];
+const fallbackFontSize = 16;
+
+const MyFontSizePicker = () => {
+	const [ fontSize, setFontSize ] = useState( 12 );
+
+	return (
+		<FontSizePicker
+			fontSizes={ fontSizes }
+			value={ fontSize }
+			fallbackFontSize={ fallbackFontSize }
+			onChange={ ( newFontSize ) => {
+				setFontSize( newFontSize );
+			} }
+		/>
+	);
+};
+
+...
+
+<MyFontSizePicker />

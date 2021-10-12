@@ -1,0 +1,18 @@
+---
+title: FormFileUpload
+prefix: wp.components|components|FormFileUpload
+description: Renders a FormFileUpload
+---
+
+$LINE_COMMENT @see https://github.com/WordPress/gutenberg/tree/trunk/packages/components/src/form-file-upload
+
+import { FormFileUpload } from '@wordpress/components';
+
+const MyFormFileUpload = () => (
+	<FormFileUpload
+		accept="image/*"
+		onChange={ () => console.log( 'new image' ) }
+	>
+		Upload
+	</FormFileUpload>
+);

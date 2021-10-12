@@ -1,0 +1,22 @@
+---
+title: CheckboxControl
+prefix: wp.components|components|CheckboxControl
+description: Checkboxes allow the user to select one or more items from a set.
+---
+
+$LINE_COMMENT @see https://github.com/WordPress/gutenberg/tree/trunk/packages/components/src/checkbox-control
+
+import { CheckboxControl } from '@wordpress/components';
+import { useState } from '@wordpress/element';
+
+const MyCheckboxControl = () => {
+	const [ isChecked, setChecked ] = useState( true );
+	return (
+		<CheckboxControl
+			label="Is author"
+			help="Is the user a author or not?"
+			checked={ isChecked }
+			onChange={ setChecked }
+		/>
+	);
+};

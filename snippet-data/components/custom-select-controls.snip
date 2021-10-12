@@ -1,0 +1,59 @@
+---
+title: CustomSelectControl
+prefix: wp.components|components|CustomSelectControl
+description: CustomSelectControl allows users to select an item from a single-option menu just like SelectControl, with the addition of being able to provide custom styles for each item in the menu. This means it does not use a native <select>, so should only be used if the custom styling is necessary.
+---
+
+$LINE_COMMENT @see https://github.com/WordPress/gutenberg/tree/trunk/packages/components/src/custom-select-control
+
+/**
+ * WordPress dependencies
+ */
+import { CustomSelectControl } from '@wordpress/components';
+import { useState } from '@wordpress/element';
+
+const options = [
+	{
+		key: 'small',
+		name: 'Small',
+		style: { fontSize: '50%' },
+	},
+	{
+		key: 'normal',
+		name: 'Normal',
+		style: { fontSize: '100%' },
+	},
+	{
+		key: 'large',
+		name: 'Large',
+		style: { fontSize: '200%' },
+	},
+	{
+		key: 'huge',
+		name: 'Huge',
+		style: { fontSize: '300%' },
+	},
+];
+
+function MyCustomSelectControl() {
+	const [ , setFontSize ] = useState();
+	return (
+		<CustomSelectControl
+			label="Font Size"
+			options={ options }
+			onChange={ ( { selectedItem } ) => setFontSize( selectedItem ) }
+		/>
+	);
+}
+
+function MyControlledCustomSelectControl() {
+	const [ fontSize, setFontSize ] = useState( options[ 0 ] );
+	return (
+		<CustomSelectControl
+			label="Font Size"
+			options={ options }
+			onChange={ ( { selectedItem } ) => setFontSize( selectedItem ) }
+			value={ options.find( ( option ) => option.key === fontSize.key ) }
+		/>
+	);
+}

@@ -1,0 +1,27 @@
+---
+title: Dropdown
+prefix: wp.components|components|Dropdown
+description: Dropdown is a React component to render a button that opens a floating content modal when clicked.
+---
+
+$LINE_COMMENT @see https://github.com/WordPress/gutenberg/tree/trunk/packages/components/src/dropdown
+
+import { Button, Dropdown } from '@wordpress/components';
+
+const MyDropdown = () => (
+	<Dropdown
+		className="my-container-class-name"
+		contentClassName="my-popover-content-classname"
+		position="bottom right"
+		renderToggle={ ( { isOpen, onToggle } ) => (
+			<Button
+				variant="primary"
+				onClick={ onToggle }
+				aria-expanded={ isOpen }
+			>
+				Toggle Popover!
+			</Button>
+		) }
+		renderContent={ () => <div>This is the content of the popover.</div> }
+	/>
+);

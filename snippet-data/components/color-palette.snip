@@ -1,0 +1,27 @@
+---
+title: ColorPalette
+prefix: wp.components|components|ColorPalette
+description: Display a color palette
+---
+
+$LINE_COMMENT @see https://github.com/WordPress/gutenberg/tree/trunk/packages/components/src/color-palette
+
+import { ColorPalette } from '@wordpress/components';
+import { useState } from '@wordpress/element';
+
+const MyColorPalette = () => {
+	const [ color, setColor ] = useState ( '#f00' )
+	const colors = [
+		{ name: 'red', color: '#f00' },
+		{ name: 'white', color: '#fff' },
+		{ name: 'blue', color: '#00f' },
+	];
+
+	return (
+		<ColorPalette
+			colors={ colors }
+			value={ color }
+			onChange={ ( color ) => setColor( color ) }
+		/>
+	);
+} );

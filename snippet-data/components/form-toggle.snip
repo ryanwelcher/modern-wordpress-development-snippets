@@ -1,0 +1,19 @@
+---
+title: FormToggle
+prefix: wp.components|components|FormToggle
+description: Renders a FormToggle
+---
+
+$LINE_COMMENT @see https://github.com/WordPress/gutenberg/tree/trunk/packages/components/src/form-toggle
+
+import { FormToggle } from '@wordpress/components';
+import { useState } from '@wordpress/element';
+
+const MyFormToggle = () => {
+	const [ isChecked, setChecked ] = useState( true );
+
+	<FormToggle
+		checked={ checked }
+		onChange={ () => setChecked( ( state ) => ! state ) }
+	/>
+};

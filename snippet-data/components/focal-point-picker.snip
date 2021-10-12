@@ -1,0 +1,41 @@
+---
+title: FocalPointPicker
+prefix: wp.components|components|FocalPointPicker
+description: Focal Point Picker is a component which creates a UI for identifying the most important visual point of an image.
+---
+
+$LINE_COMMENT @see https://github.com/WordPress/gutenberg/tree/trunk/packages/components/src/focal-point-picker
+
+import { FocalPointPicker } from '@wordpress/components';
+import { useState } from '@wordpress/element';
+
+const Example = () => {
+	const [ focalPoint, setFocalPoint ] = useState( {
+		x: 0.5,
+		y: 0.5,
+	} );
+
+	const url = '/path/to/image';
+	const dimensions = {
+		width: 400,
+		height: 100,
+	};
+
+	/* Example function to render the CSS styles based on Focal Point Picker value */
+	const style = {
+		backgroundImage: `url(${ url })`,
+		backgroundPosition: `${ focalPoint.x * 100 }% ${ focalPoint.y * 100 }%`,
+	};
+
+	return (
+		<>
+			<FocalPointPicker
+				url={ url }
+				dimensions={ dimensions }
+				value={ focalPoint }
+				onChange={ ( focalPoint ) => setFocalPoint( { focalPoint } ) }
+			/>
+			<div style={ style } />
+		</>
+	);
+};
