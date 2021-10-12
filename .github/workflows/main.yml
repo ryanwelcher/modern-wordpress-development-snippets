@@ -35,4 +35,4 @@ jobs:
 
       # Runs a set of commands using the runners shell
       - name: Lint JS
-        run: npm run lint:js.
+        run: npm run lint:js
