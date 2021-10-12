@@ -1,8 +1,8 @@
 {
   "name": "custom-block-development-snippets",
-  "displayName": "Gutenberg development snippets",
+  "displayName": "Gutenberg Snippets",
   "description": "Snippets for working with WordPress and Gutenberg",
-  "publisher": "ryan-welcher",
+  "publisher": "Ryan Welcher",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/ryanwelcher/gutenberg-snippets"
