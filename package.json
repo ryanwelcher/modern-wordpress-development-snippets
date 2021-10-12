@@ -3,6 +3,10 @@
   "displayName": "Gutenberg development snippets",
   "description": "Snippets for working with WordPress and Gutenberg",
   "publisher": "ryan-welcher",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/ryanwelcher/gutenberg-snippets"
+	},
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.49.0"
