@@ -34,5 +34,5 @@ jobs:
         run: npm ci
 
       # Runs a set of commands using the runners shell
-      - name: Lint JS
+      - name: Lint JS and snippet data
         run: npm run lint

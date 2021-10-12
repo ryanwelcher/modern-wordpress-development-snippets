@@ -1,7 +1,4 @@
-const fs = require( 'fs' );
 const path = require( 'path' );
-const glob = require( 'glob' );
-const matter = require( 'gray-matter' );
 
 const {
 	getSnippetDirectories,
@@ -20,7 +17,12 @@ async function lintSnippets() {
 			// Reduce the array.
 			try {
 				snippetData.reduce( ( arr, item ) => {
-					const { title, prefix, description, file } = item;
+					const {
+						title: snippetTitle,
+						prefix,
+						description,
+						file,
+					} = item;
 					const disallowedKeys = Object.keys( item ).filter(
 						( key ) => ! ALLOWED_DATA_KEYS.includes( key )
 					);
@@ -33,7 +35,7 @@ async function lintSnippets() {
 						);
 					}
 
-					if ( ! title || ! prefix || ! description ) {
+					if ( ! snippetTitle || ! prefix || ! description ) {
 						throw new Error(
 							`Title, Prefix and Description items cannot be empty in ${ path.basename(
 								file
@@ -44,6 +46,7 @@ async function lintSnippets() {
 					return arr;
 				}, [] );
 			} catch ( error ) {
+				// eslint-disable-next-line no-console
 				console.log( error );
 			}
 
