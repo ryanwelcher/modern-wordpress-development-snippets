@@ -15,7 +15,9 @@
     "generate": "npm run generate:snippets && npm run generate:readme",
     "generate:snippets": "node ./src/generate-snippets.js",
     "generate:readme": "node ./src/generate-readme.js",
-    "lint:js": "eslint --ext .js src"
+		"lint": "npm run lint:data && npm run lint:js",
+    "lint:js": "eslint --ext .js src",
+    "lint:data": "node ./src/lint-snippet-data.js"
   },
   "categories": [
     "Snippets"

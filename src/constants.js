@@ -9,8 +9,12 @@ const VSCODE_SNIPPETS_DIR = path.join( ROOT_DIR, '/snippets/' );
 // The location of the README.md file.
 const README_FILE = path.join( ROOT_DIR, '/README.md' );
 
+// What are the keys that the .snip files can have.
+const ALLOWED_DATA_KEYS = [ 'title', 'prefix', 'body', 'description', 'file' ];
+
 // Export all the things
 module.exports = {
+	ALLOWED_DATA_KEYS,
 	ROOT_DIR,
 	README_FILE,
 	SNIPPET_DATA_DIR,

@@ -48,6 +48,7 @@ async function getSnippetData( dir ) {
 			...restOfData,
 			prefix,
 			body,
+			file,
 		};
 	} );
 	return snippets;

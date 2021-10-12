@@ -18,5 +18,17 @@
       "\tonChange={ ( content ) => setAttributes( { content } ) }",
       "/>"
     ]
+  },
+  "test": {
+    "prefix": [
+      "wp.package",
+      "component"
+    ],
+    "description": "add description",
+    "body": [
+      "$LINE_COMMENT @see reference-link",
+      "",
+      "snippet"
+    ]
   }
 }
