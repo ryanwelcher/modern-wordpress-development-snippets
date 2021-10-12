@@ -2,6 +2,43 @@
 
 VSCode snippets for [Gutenberg](https://wordpress.org/gutenberg/) development. This project was heavily inspired by the [wordpress-components-snippets](https://github.com/ItsJonQ/wordpress-components-snippets) extension and steals the same approach to managing and building the snippets. Thanks to [Q](https://github.com/ItsJonQ/) for the groundwork!
 
+<!-- SNIPPET-TOC -->
+<!-- This table was automatically generated -->
+## Snippets
+ ### block-editor
+| Snippet(s) | Description |
+| --- | --- |
+| `wp.blockEditor`,`block-editor`,`RichText` | Inserts a RichText component. |
+
+ ### components
+| Snippet(s) | Description |
+| --- | --- |
+| `wp.components`,`AlignmentMatrixControl` | AlignmentMatrixControl components enable adjustments to horizontal and vertical alignments for UI. |
+| `wp.components`,`AnglePickerControl` | AnglePickerControl is a React component to render a UI that allows users to pick an angle. Users can choose an angle in a visual UI with the mouse by dragging an angle indicator inside a circle or by directly inserting the desired angle in a text field. |
+| `wp.components`,`Animate` | Simple interface to introduce animations to components. |
+| `wp.components`,`Autocomplete` | This component is used to provide autocompletion support for a child input component. |
+| `wp.components`,`BaseControl` | BaseControl component is used to generate labels and help text for components handling user inputs. |
+| `wp.components`,`ButtonGroup` | ButtonGroup can be used to group any related buttons together. To emphasize related buttons, a group should share a common container. |
+
+ ### json
+| Snippet(s) | Description |
+| --- | --- |
+| `wp`,`json`,`block` | Generates the contents of a block.json file |
+
+ ### php
+| Snippet(s) | Description |
+| --- | --- |
+| `wp`,`debug` | Inserts the WP_DEBUG and WP_DEBUG_LOG and other debug related constants. |
+
+ ### structure
+| Snippet(s) | Description |
+| --- | --- |
+| `block`,`edit` | Create an Edit component for custom block development. |
+| `block`,`save` | Create a Save component for custom block development. |
+| `wp`,`getEntityRecords`,`get-data` | Add getEntityRecords selector with isLoading and invalidateResolution. |
+
+
+<!-- /SNIPPET-TOC -->
 
 ## Development
 1. Install the dependencies: `npm install`
@@ -61,40 +98,3 @@ import { AlignmentMatrixControl } from '@wordpress/components';
 
 <AlignmentMatrixControl value={ alignment } onChange={ setAlignment } />
 ```
-<!-- SNIPPET-TOC -->
-<!-- This table was automatically generated -->
-## Snippets
- ### block-editor
-| Snippet(s) | Description |
-| --- | --- |
-| `richtext`,`text` | Inserts a RichText component. |
-
- ### components
-| Snippet(s) | Description |
-| --- | --- |
-| `wp.components`,`AlignmentMatrixControl` | AlignmentMatrixControl components enable adjustments to horizontal and vertical alignments for UI. |
-| `wp.components`,`AnglePickerControl` | AnglePickerControl is a React component to render a UI that allows users to pick an angle. Users can choose an angle in a visual UI with the mouse by dragging an angle indicator inside a circle or by directly inserting the desired angle in a text field. |
-| `wp.components`,`Animate` | Simple interface to introduce animations to components. |
-| `wp.components`,`Autocomplete` | This component is used to provide autocompletion support for a child input component. |
-| `wp.components`,`BaseControl` | BaseControl component is used to generate labels and help text for components handling user inputs. |
-| `wp.components`,`ButtonGroup` | ButtonGroup can be used to group any related buttons together. To emphasize related buttons, a group should share a common container. |
-
- ### json
-| Snippet(s) | Description |
-| --- | --- |
-| `wp`,`json`,`block` | Generates the contents of a block.json file |
-
- ### php
-| Snippet(s) | Description |
-| --- | --- |
-| `wp`,`debug` | Inserts the WP_DEBUG and WP_DEBUG_LOG and other debug related constants. |
-
- ### structure
-| Snippet(s) | Description |
-| --- | --- |
-| `block`,`edit` | Create an Edit component for custom block development. |
-| `block`,`save` | Create a Save component for custom block development. |
-| `wp`,`getEntityRecords`,`get-data` | Add getEntityRecords selector with isLoading and invalidateResolution. |
-
-
-<!-- /SNIPPET-TOC -->

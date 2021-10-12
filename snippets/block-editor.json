@@ -1,8 +1,9 @@
 {
   "RichText": {
     "prefix": [
-      "richtext",
-      "text"
+      "wp.blockEditor",
+      "block-editor",
+      "RichText"
     ],
     "description": "Inserts a RichText component.",
     "body": [
