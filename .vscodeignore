@@ -1,0 +1,6 @@
+.vscode/**
+.gitignore
+snippet-data/**
+src/**
+.eslintrc
+.editorconfig
