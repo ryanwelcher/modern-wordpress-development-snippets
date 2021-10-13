@@ -8,58 +8,58 @@ Note that components that are marked as deprecated or experimental are not inclu
 <!-- This table was automatically generated -->
 ## Snippets
  ### block-editor
-| Snippet(s) | Description |
+| Snippet(s) | Title |
 | --- | --- |
-| `wp.blockEditor`,`block-editor`,`RichText` | Inserts a RichText component. |
+| `wp.blockEditor`,`block-editor`,`RichText` | RichText |
 
  ### components
-| Snippet(s) | Description |
+| Snippet(s) | Title |
 | --- | --- |
-| `wp.components`,`components`,`AlignmentMatrixControl` | AlignmentMatrixControl components enable adjustments to horizontal and vertical alignments for UI. |
-| `wp.components`,`components`,`AnglePickerControl` | AnglePickerControl is a React component to render a UI that allows users to pick an angle. Users can choose an angle in a visual UI with the mouse by dragging an angle indicator inside a circle or by directly inserting the desired angle in a text field. |
-| `wp.components`,`components`,`Animate` | Simple interface to introduce animations to components. |
-| `wp.components`,`components`,`Autocomplete` | This component is used to provide autocompletion support for a child input component. |
-| `wp.components`,`components`,`BaseControl` | BaseControl component is used to generate labels and help text for components handling user inputs. |
-| `wp.components`,`components`,`ButtonGroup` | ButtonGroup can be used to group any related buttons together. To emphasize related buttons, a group should share a common container. |
-| `wp.component`,`component`,`Button` | Buttons let users take actions and make choices with a single click or tap. |
-| `wp.components`,`components`,`CheckboxControl` | Checkboxes allow the user to select one or more items from a set. |
-| `wp.components`,`components`,`ColorIndicator` | Displays a color. |
-| `wp.components`,`components`,`ColorPalette` | Display a color palette |
-| `wp.components`,`components`,`ColorPicker` | ColorPicker is a color picking component based on react-colorful. It lets you pick a color visually or by manipulating the individual RGB(A), HSL(A) and Hex(8) color values. |
-| `wp.components`,`components`,`ComboboxControl` | ComboboxControl is an enhanced version of a SelectControl, with the addition of being able to search for options using a search input. |
-| `wp.components`,`components`,`CustomSelectControl` | CustomSelectControl allows users to select an item from a single-option menu just like SelectControl, with the addition of being able to provide custom styles for each item in the menu. This means it does not use a native <select>, so should only be used if the custom styling is necessary. |
-| `wp.components`,`components`,`Dashicon` | add description |
-| `wp.components`,`components`,`DateTimePicker` | DateTimePicker is a React component that renders a calendar and clock for date and time selection. The calendar and clock components can be accessed individually using the DatePicker and TimePicker components respectively. |
-| `wp.components`,`components`,`Disabled` | Disabled is a component which disables descendant tabbable elements and prevents pointer interaction. |
-| `wp.components`,`components`,`Draggable` | Draggable is a Component that provides a way to set up a a cross-browser (including IE) customisable drag image and the transfer data for the drag event. It decouples the drag handle and the element to drag. Use it by wrapping the component that will become the drag handle and providing the DOM ID of the element to drag. |
-| `wp.components`,`components`,`DropdownMenu` | The DropdownMenu displays a list of actions (each contained in a MenuItem, MenuItemsChoice, or MenuGroup) in a compact way. It appears in a Popover after the user has interacted with an element (a button or icon) or when they perform a specific action. |
-| `wp.components`,`components`,`Dropdown` | Dropdown is a React component to render a button that opens a floating content modal when clicked. |
-| `wp.components`,`components`,`Dropzone` | DropZone is a Component creating a drop zone area taking the full size of its parent element. It supports dropping files, HTML content or any other HTML drop event. |
-| `wp.components`,`components`,`DuotonePicker`,`DuotoneSwatch` | add description |
-| `wp.components`,`components`,`ExternalLink` | add description |
-| `wp.components`,`components`,`FocalPointPicker` | Focal Point Picker is a component which creates a UI for identifying the most important visual point of an image. |
-| `wp.components`,`components`,`FontSizePicker` | FontSizePicker is a React component that renders a UI that allows users to select a font size |
-| `wp.components`,`components`,`FormFileUpload` | Renders a FormFileUpload |
-| `wp.components`,`components`,`FormToggle` | Renders a FormToggle |
-| `wp.components`,`components`,`FormTokenField` | A FormTokenField is a field similar to the tags and categories fields in the interim editor chrome, or the "to" field in Mail on OS X. Tokens can be entered by typing them or selecting them from a list of suggested tokens. |
-| `wp.components`,`components`,`Guide` | Guide is a React component that renders a user guide in a modal. |
+| `wp.components`,`components`,`AlignmentMatrixControl` | Alignment Matrix Control |
+| `wp.components`,`components`,`AnglePickerControl` | AnglePickerControl |
+| `wp.components`,`components`,`Animate` | Animate |
+| `wp.components`,`components`,`Autocomplete` | Autocomplete |
+| `wp.components`,`components`,`BaseControl` | BaseControl |
+| `wp.components`,`components`,`ButtonGroup` | ButtonGroup |
+| `wp.components`,`components`,`Button` | Button |
+| `wp.components`,`components`,`CheckboxControl` | CheckboxControl |
+| `wp.components`,`components`,`ColorIndicator` | ColorIndicator |
+| `wp.components`,`components`,`ColorPalette` | ColorPalette |
+| `wp.components`,`components`,`ColorPicker` | ColorPicker |
+| `wp.components`,`components`,`ComboboxControl` | ComboboxControl |
+| `wp.components`,`components`,`CustomSelectControl` | CustomSelectControl |
+| `wp.components`,`components`,`Dashicon` | Dashicon |
+| `wp.components`,`components`,`DateTimePicker` | DateTimePicker |
+| `wp.components`,`components`,`Disabled` | Disabled |
+| `wp.components`,`components`,`Draggable` | Draggable |
+| `wp.components`,`components`,`DropdownMenu` | DropdownMenu |
+| `wp.components`,`components`,`Dropdown` | Dropdown |
+| `wp.components`,`components`,`Dropzone` | Dropzone |
+| `wp.components`,`components`,`DuotonePicker`,`DuotoneSwatch` | DuotonePicker & DuotoneSwatch |
+| `wp.components`,`components`,`ExternalLink` | ExternalLink |
+| `wp.components`,`components`,`FocalPointPicker` | FocalPointPicker |
+| `wp.components`,`components`,`FontSizePicker` | FontSizePicker |
+| `wp.components`,`components`,`FormFileUpload` | FormFileUpload |
+| `wp.components`,`components`,`FormToggle` | FormToggle |
+| `wp.components`,`components`,`FormTokenField` | FormTokenField |
+| `wp.components`,`components`,`Guide` | Guide |
 
  ### json
-| Snippet(s) | Description |
+| Snippet(s) | Title |
 | --- | --- |
-| `wp`,`json`,`block` | Generates the contents of a block.json file |
+| `wp`,`json`,`block` | Generate block.json file |
 
  ### php
-| Snippet(s) | Description |
+| Snippet(s) | Title |
 | --- | --- |
-| `wp`,`debug` | Inserts the WP_DEBUG and WP_DEBUG_LOG and other debug related constants. |
+| `wp`,`debug` | Insert WordPress debug constants |
 
  ### structure
-| Snippet(s) | Description |
+| Snippet(s) | Title |
 | --- | --- |
-| `block`,`edit` | Create an Edit component for custom block development. |
-| `block`,`save` | Create a Save component for custom block development. |
-| `wp`,`getEntityRecords`,`get-data` | Add getEntityRecords selector with isLoading and invalidateResolution. |
+| `block`,`edit` | Block Edit component |
+| `block`,`save` | Block Save component |
+| `wp`,`getEntityRecords`,`get-data` | Retrieve from the WordPress datastore |
 
 
 <!-- /SNIPPET-TOC -->

@@ -159,8 +159,8 @@
   },
   "Button": {
     "prefix": [
-      "wp.component",
-      "component",
+      "wp.components",
+      "components",
       "Button"
     ],
     "description": "Buttons let users take actions and make choices with a single click or tap.",
