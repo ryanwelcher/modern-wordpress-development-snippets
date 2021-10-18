@@ -156,5 +156,30 @@
       "\t</ButtonGroup>",
       ");"
     ]
+  },
+  "PanelBody": {
+    "prefix": [
+      "wp.components",
+      "PanelBody"
+    ],
+    "description": "The PanelBody creates a collapsible container that can be toggled open or closed.",
+    "body": [
+      "import { PanelBody} from '@wordpress/components';",
+      "",
+      "$LINE_COMMENT @see https://github.com/WordPress/gutenberg/tree/trunk/packages/components/src/panel#panelbody",
+      "",
+      "<PanelBody",
+      "\t${1:title=\"${2:Panel Title}\"}",
+      "\t${3:opened}",
+      "\t${4:className=\"${5:panel-body-class}\"}",
+      "\t${6:icon=\"${7:smiley}\"}",
+      "\t${8:onToggle={() => {console.log('Toggled');}}}",
+      "\t${9:initialOpen={${10:true|false}}}",
+      "\t${11:children={(opened) => {console.log(opened);}}}",
+      "\t${12:buttonProps={${13:{}}}}",
+      "\t>",
+      "\t\t$TM_SELECTED_TEXT",
+      "</PanelBody>"
+    ]
   }
 }

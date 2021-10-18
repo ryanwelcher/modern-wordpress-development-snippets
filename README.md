@@ -8,6 +8,8 @@ VSCode snippets for [Gutenberg](https://wordpress.org/gutenberg/) development. T
  ### block-editor
 | Snippet(s) | Description |
 | --- | --- |
+| `wp.block-editor`,`InspectorControls` | Inspector Controls appear in the post settings sidebar when a block is being edited |
+| `wp.blockEditor`,`block-editor`,`RichText` | Inserts a RichText component. |
 | `wp.blockEditor`,`block-editor`,`RichText` | Inserts a RichText component. |
 
  ### components
@@ -19,6 +21,11 @@ VSCode snippets for [Gutenberg](https://wordpress.org/gutenberg/) development. T
 | `wp.components`,`components`,`Autocomplete` | This component is used to provide autocompletion support for a child input component. |
 | `wp.components`,`components`,`BaseControl` | BaseControl component is used to generate labels and help text for components handling user inputs. |
 | `wp.components`,`components`,`ButtonGroup` | ButtonGroup can be used to group any related buttons together. To emphasize related buttons, a group should share a common container. |
+| `wp.components`,`PanelBody` | The PanelBody creates a collapsible container that can be toggled open or closed. |
+
+ ### data
+| Snippet(s) | Description |
+| --- | --- |
 
  ### json
 | Snippet(s) | Description |
