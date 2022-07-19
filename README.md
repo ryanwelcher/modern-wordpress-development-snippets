@@ -15,15 +15,15 @@ VSCode snippets for [Gutenberg](https://wordpress.org/gutenberg/) development. T
 <!-- This table was automatically generated -->
 ## Snippets
  ### block-editor
-Name | Snippet(s) | Description |
-| --- | --- |
+| Name | Snippet(s) | Description |
+| --- | --- | --- |
 | InspectorControls | `wp.block-editor`,`InspectorControls` | Inspector Controls appear in the post settings sidebar when a block is being edited |
 | RichText.Content | `wp.blockEditor`,`block-editor`,`RichText` | Inserts a RichText component. |
 | RichText | `wp.blockEditor`,`block-editor`,`RichText` | Inserts a RichText component. |
 
  ### components
-Name | Snippet(s) | Description |
-| --- | --- |
+| Name | Snippet(s) | Description |
+| --- | --- | --- |
 | Alignment Matrix Control | `wp.components`,`components`,`AlignmentMatrixControl` | AlignmentMatrixControl components enable adjustments to horizontal and vertical alignments for UI. |
 | AnglePickerControl | `wp.components`,`components`,`AnglePickerControl` | AnglePickerControl is a React component to render a UI that allows users to pick an angle. Users can choose an angle in a visual UI with the mouse by dragging an angle indicator inside a circle or by directly inserting the desired angle in a text field. |
 | Animate | `wp.components`,`components`,`Animate` | Simple interface to introduce animations to components. |
@@ -33,18 +33,18 @@ Name | Snippet(s) | Description |
 | PanelBody | `wp.components`,`PanelBody` | The PanelBody creates a collapsible container that can be toggled open or closed. |
 
  ### data
-Name | Snippet(s) | Description |
-| --- | --- |
+| Name | Snippet(s) | Description |
+| --- | --- | --- |
 | getEmbedPreview | `wp.data`,`getEmbedPreview` | add description |
 
  ### json
-Name | Snippet(s) | Description |
-| --- | --- |
+| Name | Snippet(s) | Description |
+| --- | --- | --- |
 | Generate block.json file | `wp`,`json`,`block` | Generates the contents of a block.json file |
 
  ### notices
-Name | Snippet(s) | Description |
-| --- | --- |
+| Name | Snippet(s) | Description |
+| --- | --- | --- |
 | createErrorNotice | `wp.notices`,`createErrorNotice` | Returns an action object used in signalling that an error notice is to be created. Refer to createNotice for options documentation. |
 | createInfoNotice | `wp.notices`,`wp.data`,`createInfoNotice` | Returns an action object used in signalling that an info notice is to be created. Refer to createNotice for options documentation. |
 | createNotice | `wp.notices`,`wp.data`,`createNotice` | Returns an action object used in signalling that a notice is to be created. |
@@ -54,13 +54,13 @@ Name | Snippet(s) | Description |
 | removeNotice | `wp.notices`,`wp.data`,`removeNotice` | Returns an action object used in signalling that a notice is to be removed. |
 
  ### php
-Name | Snippet(s) | Description |
-| --- | --- |
+| Name | Snippet(s) | Description |
+| --- | --- | --- |
 | Insert WordPress debug constants | `wp`,`debug` | Inserts the WP_DEBUG and WP_DEBUG_LOG and other debug related constants. |
 
  ### structure
-Name | Snippet(s) | Description |
-| --- | --- |
+| Name | Snippet(s) | Description |
+| --- | --- | --- |
 | Block Edit component | `block`,`edit` | Create an Edit component for custom block development. |
 | Block Save component | `block`,`save` | Create a Save component for custom block development. |
 | Retrieve from the WordPress datastore | `wp`,`getEntityRecords`,`get-data` | Add getEntityRecords selector with isLoading and invalidateResolution. |

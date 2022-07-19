@@ -38,7 +38,7 @@ async function generateSnippetTables() {
 					( item ) => `\`${ item }\``
 				) } | ${ description } |\n`;
 			},
-			'Name | Snippet(s) | Description |\n| --- | --- |\n'
+			'| Name | Snippet(s) | Description |\n| --- | --- | --- |\n'
 		);
 		return `${ markdown } ### ${ title }\n${ snippets }\n`;
 	}, '' );
