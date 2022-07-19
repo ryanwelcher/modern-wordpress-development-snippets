@@ -1,4 +1,163 @@
 {
+  "createErrorNotice": {
+    "prefix": [
+      "wp.notices",
+      "createErrorNotice"
+    ],
+    "description": "Returns an action object used in signalling that an error notice is to be created. Refer to createNotice for options documentation.",
+    "body": [
+      "$LINE_COMMENT @see https://developer.wordpress.org/block-editor/reference-guides/data/data-core-notices/#createerrornotice",
+      "",
+      "import { __ } from '@wordpress/i18n';",
+      "import { useDispatch } from '@wordpress/data';",
+      "import { store as noticesStore } from '@wordpress/notices';",
+      "import { Button } from '@wordpress/components';",
+      "",
+      "const ExampleComponent = () => {",
+      "    const { createErrorNotice } = useDispatch( noticesStore );",
+      "    return (",
+      "        <Button",
+      "            onClick={ () =>",
+      "                createErrorNotice( __( 'An error occurred!' ), {",
+      "                    type: 'snackbar',",
+      "                    explicitDismiss: true,",
+      "                } )",
+      "            }",
+      "        >",
+      "            { __(",
+      "                'Generate an snackbar error notice with explicit dismiss button.'",
+      "            ) }",
+      "        </Button>",
+      "    );",
+      "}"
+    ]
+  },
+  "createInfoNotice": {
+    "prefix": [
+      "wp.notices",
+      "wp.data",
+      "createInfoNotice"
+    ],
+    "description": "Returns an action object used in signalling that an info notice is to be created. Refer to createNotice for options documentation.",
+    "body": [
+      "$LINE_COMMENT @see https://developer.wordpress.org/block-editor/reference-guides/data/data-core-notices/#createinfonotice",
+      "",
+      "import { __ } from '@wordpress/i18n';",
+      "import { useDispatch } from '@wordpress/data';",
+      "import { store as noticesStore } from '@wordpress/notices';",
+      "import { Button } from '@wordpress/components';",
+      "",
+      "const ExampleComponent = () => {",
+      "    const { createInfoNotice } = useDispatch( noticesStore );",
+      "    return (",
+      "        <Button",
+      "            onClick={ () =>",
+      "                createInfoNotice( __( 'Something happened!' ), {",
+      "                    isDismissible: false,",
+      "                } )",
+      "            }",
+      "        >",
+      "            { __( 'Generate a notice that cannot be dismissed.' ) }",
+      "        </Button>",
+      "    );",
+      "};"
+    ]
+  },
+  "createNotice": {
+    "prefix": [
+      "wp.notices",
+      "wp.data",
+      "createNotice"
+    ],
+    "description": "Returns an action object used in signalling that a notice is to be created.",
+    "body": [
+      "$LINE_COMMENT @see https://developer.wordpress.org/block-editor/reference-guides/data/data-core-notices/#createnotice",
+      "",
+      "import { __ } from '@wordpress/i18n';",
+      "import { useDispatch } from '@wordpress/data';",
+      "import { store as noticesStore } from '@wordpress/notices';",
+      "import { Button } from '@wordpress/components';",
+      "",
+      "const ExampleComponent = () => {",
+      "    const { createNotice } = useDispatch( noticesStore );",
+      "    return (",
+      "        <Button",
+      "            onClick={ () => createNotice( 'success', __( 'Notice message' ) ) }",
+      "        >",
+      "            { __( 'Generate a success notice!' ) }",
+      "        </Button>",
+      "    );",
+      "};"
+    ]
+  },
+  "createSuccessNotice": {
+    "prefix": [
+      "wp.notices",
+      "wp.data",
+      "createSuccessNotice"
+    ],
+    "description": "Returns an action object used in signalling that a success notice is to be created. Refer to createNotice for options documentation.",
+    "body": [
+      "$LINE_COMMENT @see https://developer.wordpress.org/block-editor/reference-guides/data/data-core-notices/#createsuccessnotice",
+      "",
+      "import { __ } from '@wordpress/i18n';",
+      "import { useDispatch } from '@wordpress/data';",
+      "import { store as noticesStore } from '@wordpress/notices';",
+      "import { Button } from '@wordpress/components';",
+      "",
+      "const ExampleComponent = () => {",
+      "    const { createSuccessNotice } = useDispatch( noticesStore );",
+      "    return (",
+      "        <Button",
+      "            onClick={ () =>",
+      "                createSuccessNotice( __( 'Success!' ), {",
+      "                    type: 'snackbar',",
+      "                    icon: '<img draggable=\"false\" role=\"img\" class=\"emoji\" alt=\"🔥\" src=\"https://s.w.org/images/core/emoji/14.0.0/svg/1f525.svg\">',",
+      "                } )",
+      "            }",
+      "        >",
+      "            { __( 'Generate a snackbar success notice!' ) }",
+      "        </Button>",
+      "    );",
+      "};"
+    ]
+  },
+  "createWarningNotice": {
+    "prefix": [
+      "wp.notices",
+      "wp.data",
+      "createWarningNotice"
+    ],
+    "description": "Returns an action object used in signalling that a warning notice is to be created. Refer to createNotice for options documentation.",
+    "body": [
+      "$LINE_COMMENT @see https://developer.wordpress.org/block-editor/reference-guides/data/data-core-notices/#createwarningnotice",
+      "",
+      "import { __ } from '@wordpress/i18n';",
+      "import { useDispatch } from '@wordpress/data';",
+      "import { store as noticesStore } from '@wordpress/notices';",
+      "import { Button } from '@wordpress/components';",
+      "",
+      "const ExampleComponent = () => {",
+      "    const { createWarningNotice, createInfoNotice } =",
+      "        useDispatch( noticesStore );",
+      "    return (",
+      "        <Button",
+      "            onClick={ () =>",
+      "                createWarningNotice( __( 'Warning!' ), {",
+      "                    onDismiss: () => {",
+      "                        createInfoNotice(",
+      "                            __( 'The warning has been dismissed!' )",
+      "                        );",
+      "                    },",
+      "                } )",
+      "            }",
+      "        >",
+      "            { __( 'Generates a warning notice with onDismiss callback' ) }",
+      "        </Button>",
+      "    );",
+      "};"
+    ]
+  },
   "getNotices": {
     "prefix": [
       "wp.notices",
@@ -22,6 +181,48 @@
       "                <li key={ notice.ID }>{ notice.content }</li>",
       "            ) ) }",
       "        </ul>",
+      "    );",
+      "};"
+    ]
+  },
+  "removeNotice": {
+    "prefix": [
+      "wp.notices",
+      "wp.data",
+      "removeNotice"
+    ],
+    "description": "Returns an action object used in signalling that a notice is to be removed.",
+    "body": [
+      "$LINE_COMMENT @see https://developer.wordpress.org/block-editor/reference-guides/data/data-core-notices/#removenotice",
+      "",
+      "import { __ } from '@wordpress/i18n';",
+      "import { useDispatch } from '@wordpress/data';",
+      "import { store as noticesStore } from '@wordpress/notices';",
+      "import { Button } from '@wordpress/components';",
+      "",
+      "const ExampleComponent = () => {",
+      "    const notices = useSelect( ( select ) =>",
+      "        select( noticesStore ).getNotices()",
+      "    );",
+      "    const { createWarningNotice, removeNotice } = useDispatch( noticesStore );",
+      "",
+      "    return (",
+      "        <>",
+      "            <Button",
+      "                onClick={ () =>",
+      "                    createWarningNotice( __( 'Warning!' ), {",
+      "                        isDismissible: false,",
+      "                    } )",
+      "                }",
+      "            >",
+      "                { __( 'Generate a notice' ) }",
+      "            </Button>",
+      "            { notices.length > 0 && (",
+      "                <Button onClick={ () => removeNotice( notices[ 0 ].id ) }>",
+      "                    { __( 'Remove the notice' ) }",
+      "                </Button>",
+      "            ) }",
+      "        </>",
       "    );",
       "};"
     ]
