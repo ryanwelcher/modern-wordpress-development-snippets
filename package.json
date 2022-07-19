@@ -1,63 +1,73 @@
 {
-  "name": "custom-block-development-snippets",
-  "displayName": "Gutenberg Snippets",
-  "description": "Snippets for working with WordPress and Gutenberg",
-  "publisher": "Ryan Welcher",
+	"name": "custom-block-development-snippets",
+	"displayName": "Gutenberg Snippets",
+	"description": "Snippets for working with WordPress and Gutenberg",
+	"publisher": "Ryan Welcher",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/ryanwelcher/gutenberg-snippets"
 	},
-  "version": "0.0.1",
-  "engines": {
-    "vscode": "^1.49.0"
-  },
-  "scripts": {
-    "generate": "npm run generate:snippets && npm run generate:readme",
-    "generate:snippets": "node ./src/generate-snippets.js",
-    "generate:readme": "node ./src/generate-readme.js",
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.49.0"
+	},
+	"scripts": {
+		"generate": "npm run generate:snippets && npm run generate:readme",
+		"generate:snippets": "node ./src/generate-snippets.js",
+		"generate:readme": "node ./src/generate-readme.js",
 		"lint": "npm run lint:data && npm run lint:js",
-    "lint:js": "eslint --ext .js src",
-    "lint:data": "node ./src/lint-snippet-data.js"
-  },
-  "categories": [
-    "Snippets"
-  ],
-  "contributes": {
-    "snippets": [
-      {
-        "language": "javascript",
-        "path": "./snippets/data.json"
-      },
-      {
-        "language": "javascript",
-        "path": "./snippets/components.json"
-      },
-      {
-        "language": "javascript",
-        "path": "./snippets/block-editor.json"
-      },
-      {
-        "language": "php",
-        "path": "./snippets/php.json"
-      },
-      {
-        "language": "javascript",
-        "path": "./snippets/javascript.json"
-      },
-      {
-        "language": "javascript",
-        "path": "./snippets/structure.json"
-      },
-      {
-        "language": "json",
-        "path": "./snippets/json.json"
-      }
-    ]
-  },
-  "devDependencies": {
-    "@wordpress/eslint-plugin": "^9.1.2",
-    "eslint": "^7.32.0",
-    "glob": "^7.2.0",
-    "gray-matter": "^4.0.3"
-  }
+		"lint:js": "eslint --ext .js src",
+		"lint:data": "node ./src/lint-snippet-data.js",
+		"package": "vsce package",
+		"load": "code --install-extension custom-block-development-snippets-0.0.1.vsix",
+		"refresh": "npm run package && npm run load"
+	},
+	"categories": [
+		"Snippets"
+	],
+	"contributes": {
+		"snippets": [
+			{
+				"language": "javascript",
+				"path": "./snippets/data.json"
+			},
+			{
+				"language": "javascript",
+				"path": "./snippets/notices.json"
+			},
+			{
+				"language": "javascript",
+				"path": "./snippets/components.json"
+			},
+			{
+				"language": "javascript",
+				"path": "./snippets/block-editor.json"
+			},
+			{
+				"language": "php",
+				"path": "./snippets/php.json"
+			},
+			{
+				"language": "javascript",
+				"path": "./snippets/javascript.json"
+			},
+			{
+				"language": "javascript",
+				"path": "./snippets/structure.json"
+			},
+			{
+				"language": "json",
+				"path": "./snippets/json.json"
+			}
+		]
+	},
+	"prettier": "@wordpress/prettier-config",
+	"devDependencies": {
+		"@wordpress/eslint-plugin": "^12.7.0",
+		"@wordpress/scripts": "^23.3.0",
+		"eslint-plugin-prettier": "^4.0.0",
+		"glob": "^7.2.0",
+		"gray-matter": "^4.0.3",
+		"prettier": "npm:wp-prettier@2.6.2"
+	}
 }

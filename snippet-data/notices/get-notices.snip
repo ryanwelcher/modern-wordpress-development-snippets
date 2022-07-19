@@ -1,0 +1,23 @@
+---
+title: getNotices
+prefix: wp.notices|wp.data|getNotices
+description: Returns all notices as an array, optionally for a given context. Defaults to the global context.
+---
+
+$LINE_COMMENT @see https://developer.wordpress.org/block-editor/reference-guides/data/data-core-notices/#getnotices
+
+import { useSelect } from '@wordpress/data';
+import { store as noticesStore } from '@wordpress/notices';
+
+const ExampleComponent = () => {
+    const notices = useSelect( ( select ) =>
+        select( noticesStore ).getNotices()
+    );
+    return (
+        <ul>
+            { notices.map( ( notice ) => (
+                <li key={ notice.ID }>{ notice.content }</li>
+            ) ) }
+        </ul>
+    );
+};

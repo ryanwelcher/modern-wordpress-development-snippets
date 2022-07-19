@@ -8,7 +8,8 @@ const {
 
 const TOKEN_START = '<!-- SNIPPET-TOC -->';
 const TOKEN_END = '<!-- /SNIPPET-TOC -->';
-const TOKEN_REGEX = /(\<\!-- SNIPPET-TOC --\>)([\s\S]*)(\<\!-- \/SNIPPET-TOC --\>)/g;
+const TOKEN_REGEX =
+	/(\<\!-- SNIPPET-TOC --\>)([\s\S]*)(\<\!-- \/SNIPPET-TOC --\>)/g;
 
 async function generateReadme() {
 	const content = fs.readFileSync( README_FILE, 'utf-8' );

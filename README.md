@@ -26,11 +26,17 @@ VSCode snippets for [Gutenberg](https://wordpress.org/gutenberg/) development. T
  ### data
 | Snippet(s) | Description |
 | --- | --- |
+| `wp.data`,`getEmbedPreview` | add description |
 
  ### json
 | Snippet(s) | Description |
 | --- | --- |
 | `wp`,`json`,`block` | Generates the contents of a block.json file |
+
+ ### notices
+| Snippet(s) | Description |
+| --- | --- |
+| `wp.notices`,`wp.data`,`getNotices` | Returns all notices as an array, optionally for a given context. Defaults to the global context. |
 
  ### php
 | Snippet(s) | Description |
