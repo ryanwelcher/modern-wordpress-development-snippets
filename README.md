@@ -15,55 +15,55 @@ VSCode snippets for [Gutenberg](https://wordpress.org/gutenberg/) development. T
 <!-- This table was automatically generated -->
 ## Snippets
  ### block-editor
-| Snippet(s) | Description |
+Name | Snippet(s) | Description |
 | --- | --- |
-| `wp.block-editor`,`InspectorControls` | Inspector Controls appear in the post settings sidebar when a block is being edited |
-| `wp.blockEditor`,`block-editor`,`RichText` | Inserts a RichText component. |
-| `wp.blockEditor`,`block-editor`,`RichText` | Inserts a RichText component. |
+| InspectorControls | `wp.block-editor`,`InspectorControls` | Inspector Controls appear in the post settings sidebar when a block is being edited |
+| RichText.Content | `wp.blockEditor`,`block-editor`,`RichText` | Inserts a RichText component. |
+| RichText | `wp.blockEditor`,`block-editor`,`RichText` | Inserts a RichText component. |
 
  ### components
-| Snippet(s) | Description |
+Name | Snippet(s) | Description |
 | --- | --- |
-| `wp.components`,`components`,`AlignmentMatrixControl` | AlignmentMatrixControl components enable adjustments to horizontal and vertical alignments for UI. |
-| `wp.components`,`components`,`AnglePickerControl` | AnglePickerControl is a React component to render a UI that allows users to pick an angle. Users can choose an angle in a visual UI with the mouse by dragging an angle indicator inside a circle or by directly inserting the desired angle in a text field. |
-| `wp.components`,`components`,`Animate` | Simple interface to introduce animations to components. |
-| `wp.components`,`components`,`Autocomplete` | This component is used to provide autocompletion support for a child input component. |
-| `wp.components`,`components`,`BaseControl` | BaseControl component is used to generate labels and help text for components handling user inputs. |
-| `wp.components`,`components`,`ButtonGroup` | ButtonGroup can be used to group any related buttons together. To emphasize related buttons, a group should share a common container. |
-| `wp.components`,`PanelBody` | The PanelBody creates a collapsible container that can be toggled open or closed. |
+| Alignment Matrix Control | `wp.components`,`components`,`AlignmentMatrixControl` | AlignmentMatrixControl components enable adjustments to horizontal and vertical alignments for UI. |
+| AnglePickerControl | `wp.components`,`components`,`AnglePickerControl` | AnglePickerControl is a React component to render a UI that allows users to pick an angle. Users can choose an angle in a visual UI with the mouse by dragging an angle indicator inside a circle or by directly inserting the desired angle in a text field. |
+| Animate | `wp.components`,`components`,`Animate` | Simple interface to introduce animations to components. |
+| Autocomplete | `wp.components`,`components`,`Autocomplete` | This component is used to provide autocompletion support for a child input component. |
+| BaseControl | `wp.components`,`components`,`BaseControl` | BaseControl component is used to generate labels and help text for components handling user inputs. |
+| ButtonGroup | `wp.components`,`components`,`ButtonGroup` | ButtonGroup can be used to group any related buttons together. To emphasize related buttons, a group should share a common container. |
+| PanelBody | `wp.components`,`PanelBody` | The PanelBody creates a collapsible container that can be toggled open or closed. |
 
  ### data
-| Snippet(s) | Description |
+Name | Snippet(s) | Description |
 | --- | --- |
-| `wp.data`,`getEmbedPreview` | add description |
+| getEmbedPreview | `wp.data`,`getEmbedPreview` | add description |
 
  ### json
-| Snippet(s) | Description |
+Name | Snippet(s) | Description |
 | --- | --- |
-| `wp`,`json`,`block` | Generates the contents of a block.json file |
+| Generate block.json file | `wp`,`json`,`block` | Generates the contents of a block.json file |
 
  ### notices
-| Snippet(s) | Description |
+Name | Snippet(s) | Description |
 | --- | --- |
-| `wp.notices`,`createErrorNotice` | Returns an action object used in signalling that an error notice is to be created. Refer to createNotice for options documentation. |
-| `wp.notices`,`wp.data`,`createInfoNotice` | Returns an action object used in signalling that an info notice is to be created. Refer to createNotice for options documentation. |
-| `wp.notices`,`wp.data`,`createNotice` | Returns an action object used in signalling that a notice is to be created. |
-| `wp.notices`,`wp.data`,`createSuccessNotice` | Returns an action object used in signalling that a success notice is to be created. Refer to createNotice for options documentation. |
-| `wp.notices`,`wp.data`,`createWarningNotice` | Returns an action object used in signalling that a warning notice is to be created. Refer to createNotice for options documentation. |
-| `wp.notices`,`wp.data`,`getNotices` | Returns all notices as an array, optionally for a given context. Defaults to the global context. |
-| `wp.notices`,`wp.data`,`removeNotice` | Returns an action object used in signalling that a notice is to be removed. |
+| createErrorNotice | `wp.notices`,`createErrorNotice` | Returns an action object used in signalling that an error notice is to be created. Refer to createNotice for options documentation. |
+| createInfoNotice | `wp.notices`,`wp.data`,`createInfoNotice` | Returns an action object used in signalling that an info notice is to be created. Refer to createNotice for options documentation. |
+| createNotice | `wp.notices`,`wp.data`,`createNotice` | Returns an action object used in signalling that a notice is to be created. |
+| createSuccessNotice | `wp.notices`,`wp.data`,`createSuccessNotice` | Returns an action object used in signalling that a success notice is to be created. Refer to createNotice for options documentation. |
+| createWarningNotice | `wp.notices`,`wp.data`,`createWarningNotice` | Returns an action object used in signalling that a warning notice is to be created. Refer to createNotice for options documentation. |
+| getNotices | `wp.notices`,`wp.data`,`getNotices` | Returns all notices as an array, optionally for a given context. Defaults to the global context. |
+| removeNotice | `wp.notices`,`wp.data`,`removeNotice` | Returns an action object used in signalling that a notice is to be removed. |
 
  ### php
-| Snippet(s) | Description |
+Name | Snippet(s) | Description |
 | --- | --- |
-| `wp`,`debug` | Inserts the WP_DEBUG and WP_DEBUG_LOG and other debug related constants. |
+| Insert WordPress debug constants | `wp`,`debug` | Inserts the WP_DEBUG and WP_DEBUG_LOG and other debug related constants. |
 
  ### structure
-| Snippet(s) | Description |
+Name | Snippet(s) | Description |
 | --- | --- |
-| `block`,`edit` | Create an Edit component for custom block development. |
-| `block`,`save` | Create a Save component for custom block development. |
-| `wp`,`getEntityRecords`,`get-data` | Add getEntityRecords selector with isLoading and invalidateResolution. |
+| Block Edit component | `block`,`edit` | Create an Edit component for custom block development. |
+| Block Save component | `block`,`save` | Create a Save component for custom block development. |
+| Retrieve from the WordPress datastore | `wp`,`getEntityRecords`,`get-data` | Add getEntityRecords selector with isLoading and invalidateResolution. |
 
 
 <!-- /SNIPPET-TOC -->

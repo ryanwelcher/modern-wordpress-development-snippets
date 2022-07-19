@@ -33,12 +33,12 @@ async function generateSnippetTables() {
 	);
 	const content = data.reduce( ( markdown, { title, snippetData } ) => {
 		const snippets = snippetData.reduce(
-			( snippetTable, { prefix, description } ) => {
-				return `${ snippetTable }| ${ prefix.map(
+			( snippetTable, { title, prefix, description } ) => {
+				return `${ snippetTable }| ${ title } | ${ prefix.map(
 					( item ) => `\`${ item }\``
 				) } | ${ description } |\n`;
 			},
-			'| Snippet(s) | Description |\n| --- | --- |\n'
+			'Name | Snippet(s) | Description |\n| --- | --- |\n'
 		);
 		return `${ markdown } ### ${ title }\n${ snippets }\n`;
 	}, '' );
