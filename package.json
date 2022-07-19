@@ -19,7 +19,7 @@
 		"lint:js": "eslint --ext .js src",
 		"lint:data": "node ./src/lint-snippet-data.js",
 		"package": "vsce package",
-		"load": "code --install-extension custom-block-development-snippets-0.0.1.vsix",
+		"load": "code --install-extension custom-block-development-snippets-*.vsix",
 		"refresh": "npm run package && npm run load"
 	},
 	"categories": [
