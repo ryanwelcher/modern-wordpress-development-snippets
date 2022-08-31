@@ -21,6 +21,13 @@ VSCode snippets for [Gutenberg](https://wordpress.org/gutenberg/) development. T
 | RichText.Content | `wp.blockEditor`,`block-editor`,`RichText` | Inserts a RichText component. |
 | RichText | `wp.blockEditor`,`block-editor`,`RichText` | Inserts a RichText component. |
 
+ ### blocks
+| Name | Snippet(s) | Description |
+| --- | --- | --- |
+| getCategories | `wp.blocks`,`getCategories` | Returns all the available block categories. |
+| setCategories | `wp.blocks`,`setCategories` | Returns an action object used to set block categories. |
+| setDefaultBlockName | `wp.blocks`,`setDefaultBlockName` | Returns an action object used to set the default block name. |
+
  ### components
 | Name | Snippet(s) | Description |
 | --- | --- | --- |
@@ -31,6 +38,11 @@ VSCode snippets for [Gutenberg](https://wordpress.org/gutenberg/) development. T
 | BaseControl | `wp.components`,`components`,`BaseControl` | BaseControl component is used to generate labels and help text for components handling user inputs. |
 | ButtonGroup | `wp.components`,`components`,`ButtonGroup` | ButtonGroup can be used to group any related buttons together. To emphasize related buttons, a group should share a common container. |
 | PanelBody | `wp.components`,`PanelBody` | The PanelBody creates a collapsible container that can be toggled open or closed. |
+
+ ### core-data
+| Name | Snippet(s) | Description |
+| --- | --- | --- |
+| getCurrentUser | `wp.coreData`,`getCurrentUser` | Returns the current user |
 
  ### data
 | Name | Snippet(s) | Description |
@@ -57,6 +69,7 @@ VSCode snippets for [Gutenberg](https://wordpress.org/gutenberg/) development. T
 | Name | Snippet(s) | Description |
 | --- | --- | --- |
 | Insert WordPress debug constants | `wp`,`debug` | Inserts the WP_DEBUG and WP_DEBUG_LOG and other debug related constants. |
+| Enqueue a viewScript file | `wp`,`enqueue`,`viewScript` | Enqueue the viewScript file for a dynamic block |
 
  ### structure
 | Name | Snippet(s) | Description |

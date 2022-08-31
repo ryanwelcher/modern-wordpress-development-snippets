@@ -21,7 +21,7 @@
 		"prepackage": "rimraf custom-block-development-snippets-*.vsix",
 		"package": "vsce package",
 		"load": "code --install-extension custom-block-development-snippets-*.vsix",
-		"refresh": "npm run package && npm run load"
+		"refresh-extension": "npm run package && npm run load"
 	},
 	"categories": [
 		"Snippets"
@@ -35,6 +35,14 @@
 			{
 				"language": "javascript",
 				"path": "./snippets/notices.json"
+			},
+			{
+				"language": "javascript",
+				"path": "./snippets/core-data.json"
+			},
+			{
+				"language": "javascript",
+				"path": "./snippets/blocks.json"
 			},
 			{
 				"language": "javascript",
