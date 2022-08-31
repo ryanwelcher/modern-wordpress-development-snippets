@@ -1,6 +1,10 @@
 # Gutenberg Snippets
 
-VSCode snippets for [Gutenberg](https://wordpress.org/gutenberg/) development. This project was heavily inspired by the [wordpress-components-snippets](https://github.com/ItsJonQ/wordpress-components-snippets) extension and steals the same approach to managing and building the snippets. Thanks to [Q](https://github.com/ItsJonQ/) for the groundwork!
+VSCode snippets for [Gutenberg](https://wordpress.org/gutenberg/) development. This is by no means an exhaustive list. It's mostly the items I use during my [live streams](https://www.twitch.tv/ryanwelchercodes) and random projects
+
+## Props
+
+This project was heavily inspired by the [wordpress-components-snippets](https://github.com/ItsJonQ/wordpress-components-snippets) extension and steals the same approach to managing and building the snippets. Thanks to [Q](https://github.com/ItsJonQ/) for the groundwork!
 
 ## Installation
 
@@ -13,71 +17,81 @@ VSCode snippets for [Gutenberg](https://wordpress.org/gutenberg/) development. T
 
 <!-- SNIPPET-TOC -->
 <!-- This table was automatically generated -->
-## Snippets
- ### block-editor
-| Name | Snippet(s) | Description |
-| --- | --- | --- |
-| InspectorControls | `wp.block-editor`,`InspectorControls` | Inspector Controls appear in the post settings sidebar when a block is being edited |
-| RichText.Content | `wp.blockEditor`,`block-editor`,`RichText` | Inserts a RichText component. |
-| RichText | `wp.blockEditor`,`block-editor`,`RichText` | Inserts a RichText component. |
 
- ### blocks
-| Name | Snippet(s) | Description |
-| --- | --- | --- |
-| getCategories | `wp.blocks`,`getCategories` | Returns all the available block categories. |
-| setCategories | `wp.blocks`,`setCategories` | Returns an action object used to set block categories. |
+## Snippets
+
+### block-editor
+
+| Name              | Snippet(s)                                 | Description                                                                         |
+| ----------------- | ------------------------------------------ | ----------------------------------------------------------------------------------- |
+| InspectorControls | `wp.block-editor`,`InspectorControls`      | Inspector Controls appear in the post settings sidebar when a block is being edited |
+| RichText.Content  | `wp.blockEditor`,`block-editor`,`RichText` | Inserts a RichText component.                                                       |
+| RichText          | `wp.blockEditor`,`block-editor`,`RichText` | Inserts a RichText component.                                                       |
+
+### blocks
+
+| Name                | Snippet(s)                        | Description                                                  |
+| ------------------- | --------------------------------- | ------------------------------------------------------------ |
+| getCategories       | `wp.blocks`,`getCategories`       | Returns all the available block categories.                  |
+| setCategories       | `wp.blocks`,`setCategories`       | Returns an action object used to set block categories.       |
 | setDefaultBlockName | `wp.blocks`,`setDefaultBlockName` | Returns an action object used to set the default block name. |
 
- ### components
-| Name | Snippet(s) | Description |
-| --- | --- | --- |
-| Alignment Matrix Control | `wp.components`,`components`,`AlignmentMatrixControl` | AlignmentMatrixControl components enable adjustments to horizontal and vertical alignments for UI. |
-| AnglePickerControl | `wp.components`,`components`,`AnglePickerControl` | AnglePickerControl is a React component to render a UI that allows users to pick an angle. Users can choose an angle in a visual UI with the mouse by dragging an angle indicator inside a circle or by directly inserting the desired angle in a text field. |
-| Animate | `wp.components`,`components`,`Animate` | Simple interface to introduce animations to components. |
-| Autocomplete | `wp.components`,`components`,`Autocomplete` | This component is used to provide autocompletion support for a child input component. |
-| BaseControl | `wp.components`,`components`,`BaseControl` | BaseControl component is used to generate labels and help text for components handling user inputs. |
-| ButtonGroup | `wp.components`,`components`,`ButtonGroup` | ButtonGroup can be used to group any related buttons together. To emphasize related buttons, a group should share a common container. |
-| PanelBody | `wp.components`,`PanelBody` | The PanelBody creates a collapsible container that can be toggled open or closed. |
+### components
 
- ### core-data
-| Name | Snippet(s) | Description |
-| --- | --- | --- |
+| Name                     | Snippet(s)                                            | Description                                                                                                                                                                                                                                                   |
+| ------------------------ | ----------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Alignment Matrix Control | `wp.components`,`components`,`AlignmentMatrixControl` | AlignmentMatrixControl components enable adjustments to horizontal and vertical alignments for UI.                                                                                                                                                            |
+| AnglePickerControl       | `wp.components`,`components`,`AnglePickerControl`     | AnglePickerControl is a React component to render a UI that allows users to pick an angle. Users can choose an angle in a visual UI with the mouse by dragging an angle indicator inside a circle or by directly inserting the desired angle in a text field. |
+| Animate                  | `wp.components`,`components`,`Animate`                | Simple interface to introduce animations to components.                                                                                                                                                                                                       |
+| Autocomplete             | `wp.components`,`components`,`Autocomplete`           | This component is used to provide autocompletion support for a child input component.                                                                                                                                                                         |
+| BaseControl              | `wp.components`,`components`,`BaseControl`            | BaseControl component is used to generate labels and help text for components handling user inputs.                                                                                                                                                           |
+| ButtonGroup              | `wp.components`,`components`,`ButtonGroup`            | ButtonGroup can be used to group any related buttons together. To emphasize related buttons, a group should share a common container.                                                                                                                         |
+| PanelBody                | `wp.components`,`PanelBody`                           | The PanelBody creates a collapsible container that can be toggled open or closed.                                                                                                                                                                             |
+
+### core-data
+
+| Name           | Snippet(s)                     | Description              |
+| -------------- | ------------------------------ | ------------------------ |
 | getCurrentUser | `wp.coreData`,`getCurrentUser` | Returns the current user |
 
- ### data
-| Name | Snippet(s) | Description |
-| --- | --- | --- |
+### data
+
+| Name            | Snippet(s)                  | Description     |
+| --------------- | --------------------------- | --------------- |
 | getEmbedPreview | `wp.data`,`getEmbedPreview` | add description |
 
- ### json
-| Name | Snippet(s) | Description |
-| --- | --- | --- |
+### json
+
+| Name                     | Snippet(s)          | Description                                 |
+| ------------------------ | ------------------- | ------------------------------------------- |
 | Generate block.json file | `wp`,`json`,`block` | Generates the contents of a block.json file |
 
- ### notices
-| Name | Snippet(s) | Description |
-| --- | --- | --- |
-| createErrorNotice | `wp.notices`,`createErrorNotice` | Returns an action object used in signalling that an error notice is to be created. Refer to createNotice for options documentation. |
-| createInfoNotice | `wp.notices`,`wp.data`,`createInfoNotice` | Returns an action object used in signalling that an info notice is to be created. Refer to createNotice for options documentation. |
-| createNotice | `wp.notices`,`wp.data`,`createNotice` | Returns an action object used in signalling that a notice is to be created. |
+### notices
+
+| Name                | Snippet(s)                                   | Description                                                                                                                          |
+| ------------------- | -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| createErrorNotice   | `wp.notices`,`createErrorNotice`             | Returns an action object used in signalling that an error notice is to be created. Refer to createNotice for options documentation.  |
+| createInfoNotice    | `wp.notices`,`wp.data`,`createInfoNotice`    | Returns an action object used in signalling that an info notice is to be created. Refer to createNotice for options documentation.   |
+| createNotice        | `wp.notices`,`wp.data`,`createNotice`        | Returns an action object used in signalling that a notice is to be created.                                                          |
 | createSuccessNotice | `wp.notices`,`wp.data`,`createSuccessNotice` | Returns an action object used in signalling that a success notice is to be created. Refer to createNotice for options documentation. |
 | createWarningNotice | `wp.notices`,`wp.data`,`createWarningNotice` | Returns an action object used in signalling that a warning notice is to be created. Refer to createNotice for options documentation. |
-| getNotices | `wp.notices`,`wp.data`,`getNotices` | Returns all notices as an array, optionally for a given context. Defaults to the global context. |
-| removeNotice | `wp.notices`,`wp.data`,`removeNotice` | Returns an action object used in signalling that a notice is to be removed. |
+| getNotices          | `wp.notices`,`wp.data`,`getNotices`          | Returns all notices as an array, optionally for a given context. Defaults to the global context.                                     |
+| removeNotice        | `wp.notices`,`wp.data`,`removeNotice`        | Returns an action object used in signalling that a notice is to be removed.                                                          |
 
- ### php
-| Name | Snippet(s) | Description |
-| --- | --- | --- |
-| Insert WordPress debug constants | `wp`,`debug` | Inserts the WP_DEBUG and WP_DEBUG_LOG and other debug related constants. |
-| Enqueue a viewScript file | `wp`,`enqueue`,`viewScript` | Enqueue the viewScript file for a dynamic block |
+### php
 
- ### structure
-| Name | Snippet(s) | Description |
-| --- | --- | --- |
-| Block Edit component | `block`,`edit` | Create an Edit component for custom block development. |
-| Block Save component | `block`,`save` | Create a Save component for custom block development. |
+| Name                             | Snippet(s)                  | Description                                                              |
+| -------------------------------- | --------------------------- | ------------------------------------------------------------------------ |
+| Insert WordPress debug constants | `wp`,`debug`                | Inserts the WP_DEBUG and WP_DEBUG_LOG and other debug related constants. |
+| Enqueue a viewScript file        | `wp`,`enqueue`,`viewScript` | Enqueue the viewScript file for a dynamic block                          |
+
+### structure
+
+| Name                                  | Snippet(s)                         | Description                                                            |
+| ------------------------------------- | ---------------------------------- | ---------------------------------------------------------------------- |
+| Block Edit component                  | `block`,`edit`                     | Create an Edit component for custom block development.                 |
+| Block Save component                  | `block`,`save`                     | Create a Save component for custom block development.                  |
 | Retrieve from the WordPress datastore | `wp`,`getEntityRecords`,`get-data` | Add getEntityRecords selector with isLoading and invalidateResolution. |
-
 
 <!-- /SNIPPET-TOC -->
 
