@@ -1,7 +1,8 @@
 {
   "getCategories": {
     "prefix": [
-      "wp.blocks",
+      "rw",
+      "wp_blocks",
       "getCategories"
     ],
     "description": "Returns all the available block categories.",
@@ -34,7 +35,8 @@
   },
   "setCategories": {
     "prefix": [
-      "wp.blocks",
+      "rw",
+      "wp_blocks",
       "setCategories"
     ],
     "description": "Returns an action object used to set block categories.",
@@ -67,7 +69,8 @@
   },
   "setDefaultBlockName": {
     "prefix": [
-      "wp.blocks",
+      "rw",
+      "wp_blocks",
       "setDefaultBlockName"
     ],
     "description": "Returns an action object used to set the default block name.",

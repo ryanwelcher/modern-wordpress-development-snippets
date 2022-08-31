@@ -1,7 +1,8 @@
 {
   "InspectorControls": {
     "prefix": [
-      "wp.block-editor",
+      "rw",
+      "wp_blockEditor",
       "InspectorControls"
     ],
     "description": "Inspector Controls appear in the post settings sidebar when a block is being edited",
@@ -17,7 +18,8 @@
   },
   "RichText.Content": {
     "prefix": [
-      "wp.blockEditor",
+      "rw",
+      "wp_blockEditor",
       "block-editor",
       "RichText"
     ],
@@ -32,7 +34,8 @@
   },
   "RichText": {
     "prefix": [
-      "wp.blockEditor",
+      "rw",
+      "wp_blockEditor",
       "block-editor",
       "RichText"
     ],

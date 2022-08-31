@@ -1,6 +1,7 @@
 {
   "Generate block.json file": {
     "prefix": [
+      "rw",
       "wp",
       "json",
       "block"

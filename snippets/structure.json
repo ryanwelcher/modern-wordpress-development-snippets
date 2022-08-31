@@ -1,6 +1,7 @@
 {
   "Block Edit component": {
     "prefix": [
+      "rw",
       "block",
       "edit"
     ],
@@ -33,6 +34,7 @@
   },
   "Block Save component": {
     "prefix": [
+      "rw",
       "block",
       "save"
     ],
@@ -66,6 +68,7 @@
   },
   "Retrieve from the WordPress datastore": {
     "prefix": [
+      "rw",
       "wp",
       "getEntityRecords",
       "get-data"

@@ -1,7 +1,8 @@
 {
   "getEmbedPreview": {
     "prefix": [
-      "wp.data",
+      "rw",
+      "wp_data",
       "getEmbedPreview"
     ],
     "description": "add description",

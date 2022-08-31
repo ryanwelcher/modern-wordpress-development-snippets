@@ -1,6 +1,7 @@
 {
   "Insert WordPress debug constants": {
     "prefix": [
+      "rw",
       "wp",
       "debug"
     ],
@@ -19,6 +20,7 @@
   },
   "Enqueue a viewScript file": {
     "prefix": [
+      "rw",
       "wp",
       "enqueue",
       "viewScript"

@@ -2,7 +2,8 @@
   "Custom entry points": {
     "prefix": [
       "rw",
-      "webpack"
+      "webpack",
+      "entrypoints"
     ],
     "description": "Create a webpack config with custom entry points",
     "body": [
