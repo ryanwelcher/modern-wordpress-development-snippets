@@ -67,6 +67,10 @@
 			{
 				"language": "json",
 				"path": "./snippets/json.json"
+			},
+			{
+				"language": "javascript",
+				"path": "./snippets/webpack.json"
 			}
 		]
 	},
