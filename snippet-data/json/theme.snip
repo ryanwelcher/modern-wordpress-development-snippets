@@ -1,0 +1,15 @@
+---
+title: Generate a basic theme.json file
+prefix: rw|wp|json|theme
+description: Generates the contents of a theme.json file
+---
+{
+	"$schema": "http://schemas.wp.org/trunk/theme.json",
+	"version": 2,
+	"settings": {
+		"layout": {
+			"contentSize": "${1:contentSize}",
+			"wideSize": "${2:wideSize}"
+		}
+	}
+}

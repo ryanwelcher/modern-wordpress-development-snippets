@@ -57,6 +57,7 @@ This project was heavily inspired by the [wordpress-components-snippets](https:/
 | Name | Snippet(s) | Description |
 | --- | --- | --- |
 | Generate block.json file | `rw`,`wp`,`json`,`block` | Generates the contents of a block.json file |
+| Generate a basic theme.json file | `rw`,`wp`,`json`,`theme` | Generates the contents of a theme.json file |
 
  ### notices
 | Name | Snippet(s) | Description |
