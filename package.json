@@ -29,40 +29,8 @@
 	"contributes": {
 		"snippets": [
 			{
-				"language": "javascript",
-				"path": "./snippets/data.json"
-			},
-			{
-				"language": "javascript",
-				"path": "./snippets/notices.json"
-			},
-			{
-				"language": "javascript",
-				"path": "./snippets/core-data.json"
-			},
-			{
-				"language": "javascript",
-				"path": "./snippets/blocks.json"
-			},
-			{
-				"language": "javascript",
-				"path": "./snippets/components.json"
-			},
-			{
-				"language": "javascript",
-				"path": "./snippets/block-editor.json"
-			},
-			{
 				"language": "php",
 				"path": "./snippets/php.json"
-			},
-			{
-				"language": "javascript",
-				"path": "./snippets/javascript.json"
-			},
-			{
-				"language": "javascript",
-				"path": "./snippets/structure.json"
 			},
 			{
 				"language": "json",
@@ -71,6 +39,134 @@
 			{
 				"language": "javascript",
 				"path": "./snippets/webpack.json"
+			},
+			{
+				"language": "javascript",
+				"path": "./snippets/data.json"
+			},
+			{
+				"language": "javascriptreact",
+				"path": "./snippets/data.json"
+			},
+			{
+				"language": "typescript",
+				"path": "./snippets/data.json"
+			},
+			{
+				"language": "typescriptreact",
+				"path": "./snippets/data.json"
+			},
+			{
+				"language": "jsx",
+				"path": "./snippets/data.json"
+			},
+			{
+				"language": "javascript",
+				"path": "./snippets/core-data.json"
+			},
+			{
+				"language": "javascriptreact",
+				"path": "./snippets/core-data.json"
+			},
+			{
+				"language": "typescript",
+				"path": "./snippets/core-data.json"
+			},
+			{
+				"language": "typescriptreact",
+				"path": "./snippets/core-data.json"
+			},
+			{
+				"language": "javascript",
+				"path": "./snippets/components.json"
+			},
+			{
+				"language": "javascriptreact",
+				"path": "./snippets/components.json"
+			},
+			{
+				"language": "typescript",
+				"path": "./snippets/components.json"
+			},
+			{
+				"language": "typescriptreact",
+				"path": "./snippets/components.json"
+			},
+			{
+				"language": "jsx",
+				"path": "./snippets/components.json"
+			},
+			{
+				"language": "javascript",
+				"path": "./snippets/structure.json"
+			},
+			{
+				"language": "javascriptreact",
+				"path": "./snippets/structure.json"
+			},
+			{
+				"language": "typescript",
+				"path": "./snippets/structure.json"
+			},
+			{
+				"language": "typescriptreact",
+				"path": "./snippets/structure.json"
+			},
+			{
+				"language": "jsx",
+				"path": "./snippets/structure.json"
+			},
+			{
+				"language": "javascript",
+				"path": "./snippets/notices.json"
+			},
+			{
+				"language": "javascriptreact",
+				"path": "./snippets/notices.json"
+			},
+			{
+				"language": "typescript",
+				"path": "./snippets/notices.json"
+			},
+			{
+				"language": "typescriptreact",
+				"path": "./snippets/notices.json"
+			},
+			{
+				"language": "javascript,",
+				"path": "./snippets/block-editor.json"
+			},
+			{
+				"language": "javascriptreact",
+				"path": "./snippets/block-editor.json"
+			},
+			{
+				"language": "typescript",
+				"path": "./snippets/block-editor.json"
+			},
+			{
+				"language": "typescriptreact",
+				"path": "./snippets/block-editor.json"
+			},
+			{
+				"language": "jsx",
+				"path": "./snippets/block-editor.json"
+			},
+			{
+				"language": "javascript",
+				"path": "./snippets/blocks.json"
+			},
+			{
+				"language": "javascriptreact",
+				"path": "./snippets/blocks.json"
+			},
+			{
+				"language": "typescript",
+				"path": "./snippets/blocks.json"
+			},
+			{
+				"language": "typescriptreact",
+				"path": "./snippets/blocks.json"
 			}
 		]
 	},
