@@ -29,7 +29,9 @@
       "    \"editorScript\": \"${8:file:./build/index.js}\",",
       "    \"script\": \"${9:file:./build/script.js}\",",
       "    \"editorStyle\": \"${10:file:./build/index.css}\",",
-      "    \"style\": \"${11:file:./build/index.css}\"",
+      "    \"style\": \"${11:file:./build/index.css}\",",
+      "\t\"viewScript\" : \"${12:file:./build/view.js}\",",
+      "\t\"render\" : \"${13:file:./build/template.php}\"",
       "}"
     ]
   },
@@ -47,10 +49,10 @@
       "\t\"version\": 2,",
       "\t\"settings\": {",
       "\t\t\"layout\": {",
-      "\t\t\t\"contentSize\": \"${1:contentSize}\",",
-      "\t\t\t\"wideSize\": \"${2:wideSize}\"",
+      "\t\t\t\"contentSize\": \"${1:650px}\",",
+      "\t\t\t\"wideSize\": \"${2:1000px}\"",
       "\t\t}",
-      "\t},",
+      "\t}",
       "}"
     ]
   }
