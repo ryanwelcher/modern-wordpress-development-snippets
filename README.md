@@ -1,6 +1,6 @@
-# Gutenberg Snippets
+# Modern WordPress Development Snippets
 
-VSCode snippets for [Gutenberg](https://wordpress.org/gutenberg/) development. This is by no means an exhaustive list. It's mostly the items I use during my [live streams](https://www.twitch.tv/ryanwelchercodes) and random projects
+VSCode snippets for modern WordPress development and [Gutenberg](https://wordpress.org/gutenberg/). This is by no means an exhaustive list. It's mostly the items I use during my [live streams](https://www.twitch.tv/ryanwelchercodes) and random projects
 
 ## Props
 

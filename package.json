@@ -1,6 +1,6 @@
 {
-	"name": "custom-block-development-snippets",
-	"displayName": "Gutenberg Snippets",
+	"name": "modern-wordpress-development-snippets",
+	"displayName": "Modern WordPress Developer Snippets",
 	"description": "Snippets for working with WordPress and Gutenberg",
 	"publisher": "Ryan Welcher",
 	"repository": {
@@ -18,9 +18,9 @@
 		"lint": "npm run lint:data && npm run lint:js",
 		"lint:js": "eslint --ext .js src",
 		"lint:data": "node ./src/lint-snippet-data.js",
-		"prepackage": "rimraf custom-block-development-snippets-*.vsix",
+		"prepackage": "rimraf *.vsix",
 		"package": "vsce package",
-		"load": "code --install-extension custom-block-development-snippets-*.vsix",
+		"load": "code --install-extension *.vsix",
 		"refresh-extension": "npm run package && npm run load"
 	},
 	"categories": [
