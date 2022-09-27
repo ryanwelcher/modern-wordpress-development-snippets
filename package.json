@@ -2,10 +2,10 @@
 	"name": "modern-wordpress-development-snippets",
 	"displayName": "Modern WordPress Developer Snippets",
 	"description": "Snippets for working with WordPress and Gutenberg",
-	"publisher": "Ryan Welcher",
+	"publisher": "ryanwelcher",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/ryanwelcher/gutenberg-snippets"
+		"url": "https://github.com/ryanwelcher/modern-wordpress-development-snippets"
 	},
 	"version": "1.1.0",
 	"engines": {
