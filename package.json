@@ -3,7 +3,12 @@
 	"displayName": "Modern WordPress Developer Snippets",
 	"description": "Snippets for working with WordPress and Gutenberg",
 	"publisher": "ryanwelcher",
-	"license": "SEE LICENSE IN LICENSE.md",
+	"author": {
+		"name": "Ryan Welcher",
+		"email": "me@ryanwelcher.com",
+		"url": "https://www.ryanwelcher.com"
+	},
+	"license": "MIT",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/ryanwelcher/modern-wordpress-development-snippets.git"
