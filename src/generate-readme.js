@@ -25,6 +25,7 @@ async function generateSnippetTables() {
 		dirs.map( async ( dir ) => {
 			const title = basename( dir );
 			const snippetData = await getSnippetData( dir );
+
 			return {
 				title,
 				snippetData,
@@ -36,7 +37,7 @@ async function generateSnippetTables() {
 			( snippetTable, { title: snippetTitle, prefix, description } ) => {
 				return `${ snippetTable }| ${ snippetTitle } | ${ prefix.map(
 					( item ) => `\`${ item }\``
-				) } | ${ snippetTitle } |\n`;
+				) } | ${ description } \n`;
 			},
 			'| Name | Snippet(s) | Description |\n| --- | --- | --- |\n'
 		);
