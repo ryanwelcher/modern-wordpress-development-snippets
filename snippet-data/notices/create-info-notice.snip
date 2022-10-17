@@ -1,0 +1,27 @@
+---
+title: createInfoNotice
+prefix: rw|wp_notices|wp_data|createInfoNotice
+description: Returns an action object used in signalling that an info notice is to be created. Refer to createNotice for options documentation.
+---
+
+$LINE_COMMENT @see https://developer.wordpress.org/block-editor/reference-guides/data/data-core-notices/#createinfonotice
+
+import { __ } from '@wordpress/i18n';
+import { useDispatch } from '@wordpress/data';
+import { store as noticesStore } from '@wordpress/notices';
+import { Button } from '@wordpress/components';
+
+const ExampleComponent = () => {
+    const { createInfoNotice } = useDispatch( noticesStore );
+    return (
+        <Button
+            onClick={ () =>
+                createInfoNotice( __( 'Something happened!' ), {
+                    isDismissible: false,
+                } )
+            }
+        >
+            { __( 'Generate a notice that cannot be dismissed.' ) }
+        </Button>
+    );
+};

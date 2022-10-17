@@ -1,6 +1,19 @@
-# Gutenberg Snippets
+# Modern WordPress Development Snippets
 
-VSCode snippets for [Gutenberg](https://wordpress.org/gutenberg/) development. This project was heavily inspired by the [wordpress-components-snippets](https://github.com/ItsJonQ/wordpress-components-snippets) extension and steals the same approach to managing and building the snippets. Thanks to [Q](https://github.com/ItsJonQ/) for the groundwork!
+VSCode snippets for modern WordPress development and [Gutenberg](https://wordpress.org/gutenberg/). This is by no means an exhaustive list. It's mostly the items I use during my [live streams](https://www.twitch.tv/ryanwelchercodes) and random projects
+
+## Props
+
+This project was heavily inspired by the [wordpress-components-snippets](https://github.com/ItsJonQ/wordpress-components-snippets) extension and steals the same approach to managing and building the snippets. Thanks to [Q](https://github.com/ItsJonQ/) for the groundwork!
+
+## Installation
+
+1. Clone the repo `git clone git@github.com:ryanwelcher/gutenberg-snippets.git`
+2. Install dependencies `npm install`
+3. Generate the snippets `npm run generate`
+4. Package the extension `npm run package`
+5. Install the package `npm run load` **You need to have the `code` command line tool installed** [See here for instructions](https://code.visualstudio.com/docs/setup/setup-overview)
+6. Reload VSCode.
 
 Note that components that are marked as deprecated or experimental are not included in the snippets.
 
@@ -8,63 +21,102 @@ Note that components that are marked as deprecated or experimental are not inclu
 <!-- This table was automatically generated -->
 ## Snippets
  ### block-editor
-| Snippet(s) | Title |
-| --- | --- |
-| `wp.blockEditor`,`block-editor`,`RichText` | RichText |
+| Name | Snippet(s) | Description |
+| --- | --- | --- |
+| InspectorControls | `rw`,`wp_blockEditor`,`InspectorControls` | InspectorControls |
+| RichText.Content | `rw`,`wp_blockEditor`,`block-editor`,`RichText` | RichText.Content |
+| RichText | `rw`,`wp_blockEditor`,`block-editor`,`RichText` | RichText |
+
+ ### blocks
+| Name | Snippet(s) | Description |
+| --- | --- | --- |
+| getCategories | `rw`,`wp_blocks`,`getCategories` | getCategories |
+| setCategories | `rw`,`wp_blocks`,`setCategories` | setCategories |
+| setDefaultBlockName | `rw`,`wp_blocks`,`setDefaultBlockName` | setDefaultBlockName |
 
  ### components
-| Snippet(s) | Title |
-| --- | --- |
-| `wp.components`,`components`,`AlignmentMatrixControl` | Alignment Matrix Control |
-| `wp.components`,`components`,`AnglePickerControl` | AnglePickerControl |
-| `wp.components`,`components`,`Animate` | Animate |
-| `wp.components`,`components`,`Autocomplete` | Autocomplete |
-| `wp.components`,`components`,`BaseControl` | BaseControl |
-| `wp.components`,`components`,`ButtonGroup` | ButtonGroup |
-| `wp.components`,`components`,`Button` | Button |
-| `wp.components`,`components`,`CheckboxControl` | CheckboxControl |
-| `wp.components`,`components`,`ColorIndicator` | ColorIndicator |
-| `wp.components`,`components`,`ColorPalette` | ColorPalette |
-| `wp.components`,`components`,`ColorPicker` | ColorPicker |
-| `wp.components`,`components`,`ComboboxControl` | ComboboxControl |
-| `wp.components`,`components`,`CustomSelectControl` | CustomSelectControl |
-| `wp.components`,`components`,`Dashicon` | Dashicon |
-| `wp.components`,`components`,`DateTimePicker` | DateTimePicker |
-| `wp.components`,`components`,`Disabled` | Disabled |
-| `wp.components`,`components`,`Draggable` | Draggable |
-| `wp.components`,`components`,`DropdownMenu` | DropdownMenu |
-| `wp.components`,`components`,`Dropdown` | Dropdown |
-| `wp.components`,`components`,`Dropzone` | Dropzone |
-| `wp.components`,`components`,`DuotonePicker`,`DuotoneSwatch` | DuotonePicker & DuotoneSwatch |
-| `wp.components`,`components`,`ExternalLink` | ExternalLink |
-| `wp.components`,`components`,`FocalPointPicker` | FocalPointPicker |
-| `wp.components`,`components`,`FontSizePicker` | FontSizePicker |
-| `wp.components`,`components`,`FormFileUpload` | FormFileUpload |
-| `wp.components`,`components`,`FormToggle` | FormToggle |
-| `wp.components`,`components`,`FormTokenField` | FormTokenField |
-| `wp.components`,`components`,`Guide` | Guide |
+| Name | Snippet(s) | Description |
+| --- | --- | --- |
+| Alignment Matrix Control | `rw`,`wp_components`,`components`,`AlignmentMatrixControl` | Alignment Matrix Control |
+| AnglePickerControl | `rw`,`wp_components`,`components`,`AnglePickerControl` | AnglePickerControl |
+| Animate | `rw`,`wp_components`,`components`,`Animate` | Animate |
+| Autocomplete | `rw`,`wp_components`,`components`,`Autocomplete` | Autocomplete |
+| BaseControl | `rw`,`wp_components`,`components`,`BaseControl` | BaseControl |
+| ButtonGroup | `rw`,`wp_components`,`components`,`ButtonGroup` | ButtonGroup |
+| Button | `wp.components`,`components`,`Button` | Button |
+| CheckboxControl | `wp.components`,`components`,`CheckboxControl` | CheckboxControl |
+| ColorIndicator | `wp.components`,`components`,`ColorIndicator` | ColorIndicator |
+| ColorPalette | `wp.components`,`components`,`ColorPalette` | ColorPalette |
+| ColorPicker | `wp.components`,`components`,`ColorPicker` | ColorPicker |
+| ComboboxControl | `wp.components`,`components`,`ComboboxControl` | ComboboxControl |
+| CustomSelectControl | `wp.components`,`components`,`CustomSelectControl` | CustomSelectControl |
+| Dashicon | `wp.components`,`components`,`Dashicon` | Dashicon |
+| DateTimePicker | `wp.components`,`components`,`DateTimePicker` | DateTimePicker |
+| Disabled | `wp.components`,`components`,`Disabled` | Disabled |
+| Draggable | `wp.components`,`components`,`Draggable` | Draggable |
+| DropdownMenu | `wp.components`,`components`,`DropdownMenu` | DropdownMenu |
+| Dropdown | `wp.components`,`components`,`Dropdown` | Dropdown |
+| Dropzone | `wp.components`,`components`,`Dropzone` | Dropzone |
+| DuotonePicker & DuotoneSwatch | `wp.components`,`components`,`DuotonePicker`,`DuotoneSwatch` | DuotonePicker & DuotoneSwatch |
+| ExternalLink | `wp.components`,`components`,`ExternalLink` | ExternalLink |
+| FocalPointPicker | `wp.components`,`components`,`FocalPointPicker` | FocalPointPicker |
+| FontSizePicker | `wp.components`,`components`,`FontSizePicker` | FontSizePicker |
+| FormFileUpload | `wp.components`,`components`,`FormFileUpload` | FormFileUpload |
+| FormToggle | `wp.components`,`components`,`FormToggle` | FormToggle |
+| FormTokenField | `wp.components`,`components`,`FormTokenField` | FormTokenField |
+| Guide | `wp.components`,`components`,`Guide` | Guide |
+| PanelBody | `rw`,`wp_components`,`PanelBody` | PanelBody |
+
+ ### core-data
+| Name | Snippet(s) | Description |
+| --- | --- | --- |
+| getCurrentUser | `rw`,`wp_coreData`,`getCurrentUser` | getCurrentUser |
+
+ ### data
+| Name | Snippet(s) | Description |
+| --- | --- | --- |
+| getEmbedPreview | `rw`,`wp_data`,`getEmbedPreview` | getEmbedPreview |
 
  ### json
-| Snippet(s) | Title |
-| --- | --- |
-| `wp`,`json`,`block` | Generate block.json file |
+| Name | Snippet(s) | Description |
+| --- | --- | --- |
+| Generate block.json file | `rw`,`wp`,`json`,`block` | Generate block.json file |
+| Generate a basic theme.json file | `rw`,`wp`,`json`,`theme` | Generate a basic theme.json file |
+
+ ### notices
+| Name | Snippet(s) | Description |
+| --- | --- | --- |
+| createErrorNotice | `rw`,`wp_notices`,`createErrorNotice` | createErrorNotice |
+| createInfoNotice | `rw`,`wp_notices`,`wp_data`,`createInfoNotice` | createInfoNotice |
+| createNotice | `rw`,`wp_notices`,`wp_data`,`createNotice` | createNotice |
+| createSuccessNotice | `rw`,`wp_notices`,`wp_data`,`createSuccessNotice` | createSuccessNotice |
+| createWarningNotice | `rw`,`wp_notices`,`wp_data`,`createWarningNotice` | createWarningNotice |
+| getNotices | `rw`,`wp_notices`,`wp_data`,`getNotices` | getNotices |
+| removeNotice | `rw`,`wp_notices`,`wp_data`,`removeNotice` | removeNotice |
 
  ### php
-| Snippet(s) | Title |
-| --- | --- |
-| `wp`,`debug` | Insert WordPress debug constants |
+| Name | Snippet(s) | Description |
+| --- | --- | --- |
+| Insert WordPress debug constants | `rw`,`wp`,`debug` | Insert WordPress debug constants |
+| Enqueue a viewScript file | `rw`,`wp`,`enqueue`,`viewScript` | Enqueue a viewScript file |
 
  ### structure
-| Snippet(s) | Title |
-| --- | --- |
-| `block`,`edit` | Block Edit component |
-| `block`,`save` | Block Save component |
-| `wp`,`getEntityRecords`,`get-data` | Retrieve from the WordPress datastore |
+| Name | Snippet(s) | Description |
+| --- | --- | --- |
+| Block Edit component | `rw`,`block`,`edit` | Block Edit component |
+| Block Save component | `rw`,`block`,`save` | Block Save component |
+| Retrieve from the WordPress datastore | `rw`,`wp`,`getEntityRecords`,`get-data` | Retrieve from the WordPress datastore |
+
+ ### webpack
+| Name | Snippet(s) | Description |
+| --- | --- | --- |
+| Custom entry points | `rw`,`webpack`,`entrypoints` | Custom entry points |
 
 
 <!-- /SNIPPET-TOC -->
 
 ## Development
+
 1. Install the dependencies: `npm install`
 2. DO WORK!
 3. Generate the updated snippets: `npm run generate`
@@ -80,6 +132,7 @@ Once the file has been created, there is a custom snippet for the workspace that
 The .snip files use front-matter to store the data about the snippet
 
 Raw snippet file:
+
 ```plaintext
 ---
 title: Alignment Matrix Control
@@ -95,6 +148,7 @@ import { AlignmentMatrixControl } from '@wordpress/components';
 ```
 
 Converts to in snippet file:
+
 ```json
 "Alignment Matrix Control": {
     "prefix": [
@@ -111,14 +165,15 @@ Converts to in snippet file:
     ]
 },
 ```
+
 Note that the prefix is pipe-delimited and is converted to an array in the json.
 
-
 Inserted Snippet:
+
 ```jsx
 // Reference: https://github.com/WordPress/gutenberg/tree/trunk/packages/components/src/alignment-matrix-control",
 
 import { AlignmentMatrixControl } from '@wordpress/components';
 
-<AlignmentMatrixControl value={ alignment } onChange={ setAlignment } />
+<AlignmentMatrixControl value={ alignment } onChange={ setAlignment } />;
 ```

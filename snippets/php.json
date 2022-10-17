@@ -1,6 +1,7 @@
 {
   "Insert WordPress debug constants": {
     "prefix": [
+      "rw",
       "wp",
       "debug"
     ],
@@ -15,6 +16,19 @@
       "@ini_set( 'display_errors', 0 );",
       "$LINE_COMMENT Use dev versions of core JS and CSS files (only needed if you are modifying these core files)",
       "define( 'SCRIPT_DEBUG', true )"
+    ]
+  },
+  "Enqueue a viewScript file": {
+    "prefix": [
+      "rw",
+      "wp",
+      "enqueue",
+      "viewScript"
+    ],
+    "description": "Enqueue the viewScript file for a dynamic block",
+    "body": [
+      "$LINE_COMMENT Naming convention: '{namespace}-{blockname}-view-script",
+      "wp_enqueue_script( '${1:namespace}-${2:blockname}-view-script' );"
     ]
   }
 }

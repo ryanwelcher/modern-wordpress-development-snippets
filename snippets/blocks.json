@@ -1,0 +1,94 @@
+{
+  "getCategories": {
+    "prefix": [
+      "rw",
+      "wp_blocks",
+      "getCategories"
+    ],
+    "description": "Returns all the available block categories.",
+    "body": [
+      "$LINE_COMMENT @see https://developer.wordpress.org/block-editor/reference-guides/data/data-core-blocks/#getcategories",
+      "",
+      "import { store as blocksStore } from '@wordpress/blocks';",
+      "import { useSelect, useDispatch } from '@wordpress/data';",
+      "",
+      "const ExampleComponent = () => {",
+      "\tconst blockCategories = useSelect( ( select ) =>",
+      "\t\tselect( blocksStore ).getCategories()",
+      "\t);",
+      "\tconst { setCategories } = useDispatch( blocksStore );",
+      "",
+      "\treturn (",
+      "\t\t<Button",
+      "\t\t\tonClick={ () =>",
+      "\t\t\t\tsetCategories( [",
+      "\t\t\t\t\t...blockCategories,",
+      "\t\t\t\t\t{ title: 'Custom Category', slug: 'custom-category' },",
+      "\t\t\t\t] )",
+      "\t\t\t}",
+      "\t\t>",
+      "\t\t\t{ __( 'Add a new custom block category' ) }",
+      "\t\t</Button>",
+      "\t);",
+      "};"
+    ]
+  },
+  "setCategories": {
+    "prefix": [
+      "rw",
+      "wp_blocks",
+      "setCategories"
+    ],
+    "description": "Returns an action object used to set block categories.",
+    "body": [
+      "$LINE_COMMENT @see https://developer.wordpress.org/block-editor/reference-guides/data/data-core-blocks/#setcategories",
+      "",
+      "import { store as blocksStore } from '@wordpress/blocks';",
+      "import { useSelect, useDispatch } from '@wordpress/data';",
+      "",
+      "const ExampleComponent = () => {",
+      "\tconst blockCategories = useSelect( ( select ) =>",
+      "\t\tselect( blocksStore ).getCategories()",
+      "\t);",
+      "\tconst { setCategories } = useDispatch( blocksStore );",
+      "",
+      "\treturn (",
+      "\t\t<Button",
+      "\t\t\tonClick={ () =>",
+      "\t\t\t\tsetCategories( [",
+      "\t\t\t\t\t...blockCategories,",
+      "\t\t\t\t\t{ title: 'Custom Category', slug: 'custom-category' },",
+      "\t\t\t\t] )",
+      "\t\t\t}",
+      "\t\t>",
+      "\t\t\t{ __( 'Add a new custom block category' ) }",
+      "\t\t</Button>",
+      "\t);",
+      "};"
+    ]
+  },
+  "setDefaultBlockName": {
+    "prefix": [
+      "rw",
+      "wp_blocks",
+      "setDefaultBlockName"
+    ],
+    "description": "Returns an action object used to set the default block name.",
+    "body": [
+      "$LINE_COMMENT @see https://developer.wordpress.org/block-editor/reference-guides/data/data-core-blocks/#setdefaultblockname",
+      "",
+      "import { store as blocksStore } from '@wordpress/blocks';",
+      "import { useDispatch } from '@wordpress/data';",
+      "",
+      "const ExampleComponent = () => {",
+      "\tconst { setDefaultBlockName } = useDispatch( blocksStore );",
+      "",
+      "\treturn (",
+      "\t\t<Button onClick={ () => setDefaultBlockName( 'core/heading' ) }>",
+      "\t\t\t{ __( 'Set the default block to Heading' ) }",
+      "\t\t</Button>",
+      "\t);",
+      "};"
+    ]
+  }
+}

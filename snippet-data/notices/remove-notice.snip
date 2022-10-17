@@ -1,0 +1,38 @@
+---
+title: removeNotice
+prefix: rw|wp_notices|wp_data|removeNotice
+description: Returns an action object used in signalling that a notice is to be removed.
+---
+
+$LINE_COMMENT @see https://developer.wordpress.org/block-editor/reference-guides/data/data-core-notices/#removenotice
+
+import { __ } from '@wordpress/i18n';
+import { useDispatch } from '@wordpress/data';
+import { store as noticesStore } from '@wordpress/notices';
+import { Button } from '@wordpress/components';
+
+const ExampleComponent = () => {
+    const notices = useSelect( ( select ) =>
+        select( noticesStore ).getNotices()
+    );
+    const { createWarningNotice, removeNotice } = useDispatch( noticesStore );
+
+    return (
+        <>
+            <Button
+                onClick={ () =>
+                    createWarningNotice( __( 'Warning!' ), {
+                        isDismissible: false,
+                    } )
+                }
+            >
+                { __( 'Generate a notice' ) }
+            </Button>
+            { notices.length > 0 && (
+                <Button onClick={ () => removeNotice( notices[ 0 ].id ) }>
+                    { __( 'Remove the notice' ) }
+                </Button>
+            ) }
+        </>
+    );
+};

@@ -1,0 +1,23 @@
+---
+title: createNotice
+prefix: rw|wp_notices|wp_data|createNotice
+description: Returns an action object used in signalling that a notice is to be created.
+---
+
+$LINE_COMMENT @see https://developer.wordpress.org/block-editor/reference-guides/data/data-core-notices/#createnotice
+
+import { __ } from '@wordpress/i18n';
+import { useDispatch } from '@wordpress/data';
+import { store as noticesStore } from '@wordpress/notices';
+import { Button } from '@wordpress/components';
+
+const ExampleComponent = () => {
+    const { createNotice } = useDispatch( noticesStore );
+    return (
+        <Button
+            onClick={ () => createNotice( 'success', __( 'Notice message' ) ) }
+        >
+            { __( 'Generate a success notice!' ) }
+        </Button>
+    );
+};

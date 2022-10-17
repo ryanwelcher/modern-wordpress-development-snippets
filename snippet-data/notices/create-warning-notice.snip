@@ -1,0 +1,32 @@
+---
+title: createWarningNotice
+prefix: rw|wp_notices|wp_data|createWarningNotice
+description: Returns an action object used in signalling that a warning notice is to be created. Refer to createNotice for options documentation.
+---
+
+$LINE_COMMENT @see https://developer.wordpress.org/block-editor/reference-guides/data/data-core-notices/#createwarningnotice
+
+import { __ } from '@wordpress/i18n';
+import { useDispatch } from '@wordpress/data';
+import { store as noticesStore } from '@wordpress/notices';
+import { Button } from '@wordpress/components';
+
+const ExampleComponent = () => {
+    const { createWarningNotice, createInfoNotice } =
+        useDispatch( noticesStore );
+    return (
+        <Button
+            onClick={ () =>
+                createWarningNotice( __( 'Warning!' ), {
+                    onDismiss: () => {
+                        createInfoNotice(
+                            __( 'The warning has been dismissed!' )
+                        );
+                    },
+                } )
+            }
+        >
+            { __( 'Generates a warning notice with onDismiss callback' ) }
+        </Button>
+    );
+};

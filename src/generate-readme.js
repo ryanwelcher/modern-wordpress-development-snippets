@@ -8,7 +8,8 @@ const {
 
 const TOKEN_START = '<!-- SNIPPET-TOC -->';
 const TOKEN_END = '<!-- /SNIPPET-TOC -->';
-const TOKEN_REGEX = /(\<\!-- SNIPPET-TOC --\>)([\s\S]*)(\<\!-- \/SNIPPET-TOC --\>)/g;
+const TOKEN_REGEX =
+	/(\<\!-- SNIPPET-TOC --\>)([\s\S]*)(\<\!-- \/SNIPPET-TOC --\>)/g;
 
 async function generateReadme() {
 	const content = fs.readFileSync( README_FILE, 'utf-8' );
@@ -32,12 +33,12 @@ async function generateSnippetTables() {
 	);
 	const content = data.reduce( ( markdown, { title, snippetData } ) => {
 		const snippets = snippetData.reduce(
-			( snippetTable, { prefix, title: snippetTitle, description } ) => {
-				return `${ snippetTable }| ${ prefix.map(
+			( snippetTable, { title: snippetTitle, prefix, description } ) => {
+				return `${ snippetTable }| ${ snippetTitle } | ${ prefix.map(
 					( item ) => `\`${ item }\``
 				) } | ${ snippetTitle } |\n`;
 			},
-			'| Snippet(s) | Title |\n| --- | --- |\n'
+			'| Name | Snippet(s) | Description |\n| --- | --- | --- |\n'
 		);
 		return `${ markdown } ### ${ title }\n${ snippets }\n`;
 	}, '' );

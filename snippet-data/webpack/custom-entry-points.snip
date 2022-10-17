@@ -1,0 +1,20 @@
+---
+title: Custom entry points
+prefix: rw|webpack|entrypoints
+description: Create a webpack config with custom entry points
+---
+
+$LINE_COMMENT Import the original config from the @wordpress/scripts package.
+const defaultConfig = require("@wordpress/scripts/config/webpack.config");
+
+$LINE_COMMENT Import the helper to find and generate the entry points in the src directory
+const { getWebpackEntryPoints } = require("@wordpress/scripts/utils/config");
+
+$LINE_COMMENT Add any a new entry point by extending the webpack config.
+module.exports = {
+	...defaultConfig,
+	entry: {
+		...getWebpackEntryPoints(),
+		${1:entry}: "${2:path}"
+	},
+};

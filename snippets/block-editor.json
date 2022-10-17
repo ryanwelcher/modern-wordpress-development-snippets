@@ -1,7 +1,41 @@
 {
+  "InspectorControls": {
+    "prefix": [
+      "rw",
+      "wp_blockEditor",
+      "InspectorControls"
+    ],
+    "description": "Inspector Controls appear in the post settings sidebar when a block is being edited",
+    "body": [
+      "$LINE_COMMENT @see https://github.com/WordPress/gutenberg/tree/trunk/packages/block-editor/src/components/inspector-controls",
+      "",
+      "import { InspectorControls } from '@wordpress/block-editor';",
+      "",
+      "<InspectorControls>",
+      "\t$TM_SELECTED_TEXT",
+      "</InspectorControls>"
+    ]
+  },
+  "RichText.Content": {
+    "prefix": [
+      "rw",
+      "wp_blockEditor",
+      "block-editor",
+      "RichText"
+    ],
+    "description": "Inserts a RichText component.",
+    "body": [
+      "$LINE_COMMENT @see https://github.com/WordPress/gutenberg/blob/trunk/packages/block-editor/src/components/rich-text/README.md",
+      "",
+      "import { RichText } from '@wordpress/block-editor';",
+      "",
+      "<RichText.Content ${3:tagName=\"${4:div}\"} value={${1:value}} />"
+    ]
+  },
   "RichText": {
     "prefix": [
-      "wp.blockEditor",
+      "rw",
+      "wp_blockEditor",
       "block-editor",
       "RichText"
     ],
@@ -12,10 +46,34 @@
       "import { RichText } from '@wordpress/block-editor';",
       "",
       "<RichText",
-      "\ttagName=\"h2\"",
-      "\tclassName={ className }",
-      "\tvalue={ attributes.content }",
+      "\tvalue={${1:value}}",
       "\tonChange={ ( content ) => setAttributes( { content } ) }",
+      "\t${3:tagName=\"${4:div}\"}",
+      "\t${4:placeholder=\"${5:Placeholder Text\"}",
+      "\t${6:multiline={${7:boolean|string}}}",
+      "\t${8:onSplit={(value) => console.log(value)}}",
+      "\t${9:onReplace]={(blocks) => console.log(blocks)}}",
+      "\t${10:onMerge]={(forward) => console.log(forward)}}",
+      "\t${11:onRemove]={(forward) => console.log(forward)}}",
+      "\t${12:allowedFormats]={[",
+      "\t\t'core/bold',",
+      "\t\t'core/code',",
+      "\t\t'core/image',",
+      "\t\t'core/italic',",
+      "\t\t'core/link',",
+      "\t\t'core/strikethrough',",
+      "\t\t'core/underline',",
+      "\t\t'core/text-color',",
+      "\t\t'core/subscript',",
+      "\t\t'core/superscript',",
+      "\t\t'core/keyboard',",
+      "\t\t]",
+      "\t}}",
+      "\t${13:withoutInteractiveFormatting={${14:true|false}}}",
+      "\t${15:isSelected={${16:true|false}}}",
+      "\t${17:autocompleters={${18:[]}}}",
+      "\t${19:preserveWhiteSpace={${20:true|false}}}",
+      "\t${21:className=\"${22:class-name}\"}",
       "/>"
     ]
   }

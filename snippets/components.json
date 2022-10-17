@@ -1,7 +1,8 @@
 {
   "Alignment Matrix Control": {
     "prefix": [
-      "wp.components",
+      "rw",
+      "wp_components",
       "components",
       "AlignmentMatrixControl"
     ],
@@ -16,7 +17,8 @@
   },
   "AnglePickerControl": {
     "prefix": [
-      "wp.components",
+      "rw",
+      "wp_components",
       "components",
       "AnglePickerControl"
     ],
@@ -35,7 +37,8 @@
   },
   "Animate": {
     "prefix": [
-      "wp.components",
+      "rw",
+      "wp_components",
       "components",
       "Animate"
     ],
@@ -58,7 +61,8 @@
   },
   "Autocomplete": {
     "prefix": [
-      "wp.components",
+      "rw",
+      "wp_components",
       "components",
       "Autocomplete"
     ],
@@ -73,7 +77,7 @@
       "\t\t{",
       "\t\t\tname: 'fruit',",
       "\t\t\t// The prefix that triggers this completer",
-      "\t\t\ttriggerPrefix: '~',",
+      "\t\t\ttriggerprefix: rw|'~',",
       "\t\t\t// The option data",
       "\t\t\toptions: [",
       "\t\t\t\t{ visual: '🍎', name: 'Apple', id: 1 },",
@@ -120,7 +124,8 @@
   },
   "BaseControl": {
     "prefix": [
-      "wp.components",
+      "rw",
+      "wp_components",
       "components",
       "BaseControl"
     ],
@@ -139,7 +144,8 @@
   },
   "ButtonGroup": {
     "prefix": [
-      "wp.components",
+      "rw",
+      "wp_components",
       "components",
       "ButtonGroup"
     ],
@@ -886,6 +892,32 @@
       "\t\t/>",
       "\t);",
       "}"
+    ]
+  },
+  "PanelBody": {
+    "prefix": [
+      "rw",
+      "wp_components",
+      "PanelBody"
+    ],
+    "description": "The PanelBody creates a collapsible container that can be toggled open or closed.",
+    "body": [
+      "import { PanelBody} from '@wordpress/components';",
+      "",
+      "$LINE_COMMENT @see https://github.com/WordPress/gutenberg/tree/trunk/packages/components/src/panel#panelbody",
+      "",
+      "<PanelBody",
+      "\t${1:title=\"${2:Panel Title}\"}",
+      "\t${3:opened}",
+      "\t${4:className=\"${5:panel-body-class}\"}",
+      "\t${6:icon=\"${7:smiley}\"}",
+      "\t${8:onToggle={() => {console.log('Toggled');}}}",
+      "\t${9:initialOpen={${10:true|false}}}",
+      "\t${11:children={(opened) => {console.log(opened);}}}",
+      "\t${12:buttonProps={${13:{}}}}",
+      "\t>",
+      "\t\t$TM_SELECTED_TEXT",
+      "</PanelBody>"
     ]
   }
 }

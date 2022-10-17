@@ -1,0 +1,28 @@
+---
+title: createSuccessNotice
+prefix: rw|wp_notices|wp_data|createSuccessNotice
+description: Returns an action object used in signalling that a success notice is to be created. Refer to createNotice for options documentation.
+---
+
+$LINE_COMMENT @see https://developer.wordpress.org/block-editor/reference-guides/data/data-core-notices/#createsuccessnotice
+
+import { __ } from '@wordpress/i18n';
+import { useDispatch } from '@wordpress/data';
+import { store as noticesStore } from '@wordpress/notices';
+import { Button } from '@wordpress/components';
+
+const ExampleComponent = () => {
+    const { createSuccessNotice } = useDispatch( noticesStore );
+    return (
+        <Button
+            onClick={ () =>
+                createSuccessNotice( __( 'Success!' ), {
+                    type: 'snackbar',
+                    icon: '<img draggable="false" role="img" class="emoji" alt="🔥" src="https://s.w.org/images/core/emoji/14.0.0/svg/1f525.svg">',
+                } )
+            }
+        >
+            { __( 'Generate a snackbar success notice!' ) }
+        </Button>
+    );
+};

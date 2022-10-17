@@ -1,0 +1,22 @@
+---
+title: PanelBody
+prefix: rw|wp_components|PanelBody
+description: The PanelBody creates a collapsible container that can be toggled open or closed.
+---
+
+import { PanelBody} from '@wordpress/components';
+
+$LINE_COMMENT @see https://github.com/WordPress/gutenberg/tree/trunk/packages/components/src/panel#panelbody
+
+<PanelBody
+	${1:title="${2:Panel Title}"}
+	${3:opened}
+	${4:className="${5:panel-body-class}"}
+	${6:icon="${7:smiley}"}
+	${8:onToggle={() => {console.log('Toggled');}}}
+	${9:initialOpen={${10:true|false}}}
+	${11:children={(opened) => {console.log(opened);}}}
+	${12:buttonProps={${13:{}}}}
+	>
+		$TM_SELECTED_TEXT
+</PanelBody>
