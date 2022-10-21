@@ -98,6 +98,8 @@ Note that components that are marked as deprecated or experimental are not inclu
 | Name | Snippet(s) | Description |
 | --- | --- | --- |
 | Insert WordPress debug constants | `rw`,`wp`,`debug` | Inserts the WP_DEBUG and WP_DEBUG_LOG and other debug related constants. 
+| Enqueue a script from a plugin in the block editor | `rw`,`wp`,`php`,`enqueue-from-plugin` | Enqueues a script in the block editor stored in a plugin 
+| Enqueue a script from a theme in the block editor | `rw`,`wp`,`php`,`enqueue-from-plugin` | Enqueues a script in the block editor stored in a theme 
 | Enqueue a viewScript file | `rw`,`wp`,`enqueue`,`viewScript` | Enqueue the viewScript file for a dynamic block 
 
  ### structure

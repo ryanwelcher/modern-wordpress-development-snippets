@@ -18,6 +18,64 @@
       "define( 'SCRIPT_DEBUG', true )"
     ]
   },
+  "Enqueue a script from a plugin in the block editor": {
+    "prefix": [
+      "rw",
+      "wp",
+      "php",
+      "enqueue-from-plugin"
+    ],
+    "description": "Enqueues a script in the block editor stored in a plugin",
+    "body": [
+      "$LINE_COMMENT Enqueue ${2:filename} from a plugin",
+      "add_action(",
+      "\t'${1:enqueue_block_editor_assets}',",
+      "\tfunction() {",
+      "\t\t$$assets_file = plugin_dir_path( __FILE__ ) . '/build/${2:filename}.asset.php';",
+      "",
+      "\t\tif ( file_exists( $assets_file ) ) {",
+      "\t\t\t$$assets = include $$assets_file;",
+      "\t\t\twp_enqueue_script(",
+      "\t\t\t\t'${3:script-handle}',",
+      "\t\t\t\tplugin_dir_url( __FILE__ ) . '/build/${2:filename}.js',",
+      "\t\t\t\t$$assets['dependencies'],",
+      "\t\t\t\t$$assets['version'],",
+      "\t\t\t\ttrue",
+      "\t\t\t);",
+      "\t\t}",
+      "\t}",
+      ");"
+    ]
+  },
+  "Enqueue a script from a theme in the block editor": {
+    "prefix": [
+      "rw",
+      "wp",
+      "php",
+      "enqueue-from-plugin"
+    ],
+    "description": "Enqueues a script in the block editor stored in a theme",
+    "body": [
+      "$LINE_COMMENT Enqueue ${2:filename} from a theme.",
+      "add_action(",
+      "\t'${1:enqueue_block_editor_assets}',",
+      "\tfunction() {",
+      "\t\t$$assets_file = get_stylesheet_directory(). '/build/${2:filename}.asset.php';",
+      "",
+      "\t\tif ( file_exists( $assets_file ) ) {",
+      "\t\t\t$$assets = include $$assets_file;",
+      "\t\t\twp_enqueue_script(",
+      "\t\t\t\t'${3:script-handle}',",
+      "\t\t\t\tget_stylesheet_directory_uri() . '/build/${2:filename}.js',",
+      "\t\t\t\t$$assets['dependencies'],",
+      "\t\t\t\t$$assets['version'],",
+      "\t\t\t\ttrue",
+      "\t\t\t);",
+      "\t\t}",
+      "\t}",
+      ");"
+    ]
+  },
   "Enqueue a viewScript file": {
     "prefix": [
       "rw",
