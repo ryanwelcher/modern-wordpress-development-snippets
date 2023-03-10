@@ -3,17 +3,17 @@ title: Enqueue a script from a plugin in the block editor
 prefix: rw|wp|php|enqueue-from-plugin
 description: Enqueues a script in the block editor stored in a plugin
 ---
-$LINE_COMMENT Enqueue ${2:filename} from a plugin
+$LINE_COMMENT Enqueue ${1:filename} from a plugin
 add_action(
-	'${1:enqueue_block_editor_assets}',
+	'enqueue_block_editor_assets',
 	function() {
-		$$assets_file = plugin_dir_path( __FILE__ ) . '/build/${2:filename}.asset.php';
+		$$assets_file = plugin_dir_path( __FILE__ ) . '/build/${1:filename}.asset.php';
 
 		if ( file_exists( $assets_file ) ) {
 			$$assets = include $$assets_file;
 			wp_enqueue_script(
-				'${3:script-handle}',
-				plugin_dir_url( __FILE__ ) . '/build/${2:filename}.js',
+				'${2:script-handle}',
+				plugin_dir_url( __FILE__ ) . '/build/${1:filename}.js',
 				$$assets['dependencies'],
 				$$assets['version'],
 				true
