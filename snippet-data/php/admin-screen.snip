@@ -1,0 +1,32 @@
+---
+title: Create a new Admin Screen
+prefix: rw|screen
+description: Register a new admin screen
+---
+
+/**
+ * Registers the settings pave
+ */
+function register_plugin_settings_page() {
+	add_menu_page(
+		__( '${1:name}' ),
+		__( '${1:name}' ),
+		'manage_options',
+		'${1:page-slug}',
+		__NAMESPACE__ . '\render_settings_page',
+		'dashicons-yes'
+	);
+}
+
+add_action( 'admin_menu', __NAMESPACE__ . '\register_plugin_settings_page' );
+
+/**
+ * Renders the settings page
+ */
+function render_settings_page() {
+	?>
+	<div id="${1:page-slug}">
+		Page Content
+	</div>
+	<?php
+}

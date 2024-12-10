@@ -1,0 +1,21 @@
+---
+title: Command Pallette
+prefix: rw|command
+description: Register a command
+---
+
+import { store as commandsStore } from '@wordpress/commands';
+import { dispatch, select } from '@wordpress/data';
+import { __ } from '@wordpress/i18n';
+
+function doWork() {
+}
+
+dispatch( commandsStore ).registerCommand( {
+	name: '${1:command name}',
+	label: __( '${1:label}' ),
+	callback: ( { close } ) => {
+		doWork();
+		close();
+	},
+} );

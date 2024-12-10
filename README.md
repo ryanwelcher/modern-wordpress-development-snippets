@@ -20,6 +20,15 @@ Note that components that are marked as deprecated or experimental are not inclu
 <!-- SNIPPET-TOC -->
 <!-- This table was automatically generated -->
 ## Snippets
+ ### api
+| Name | Snippet(s) | Description |
+| --- | --- | --- |
+| registerBlockVariation | `rw`,`variation` | Register a block variation 
+| DomReady | `rw`,`domready` | Setup domReady 
+| registerFormatType | `rw`,`format` | Register a format type 
+| registerPlugin | `rw`,`registerPlugin` | Register a plugin for slotfill 
+| Command Pallette | `rw`,`command` | Register a command 
+
  ### block-editor
 | Name | Snippet(s) | Description |
 | --- | --- | --- |
@@ -77,6 +86,11 @@ Note that components that are marked as deprecated or experimental are not inclu
 | --- | --- | --- |
 | getEmbedPreview | `rw`,`wp_data`,`getEmbedPreview` | add description 
 
+ ### js
+| Name | Snippet(s) | Description |
+| --- | --- | --- |
+| requestAnimationFrame | `rw`,`animate` | requestAnimationFrame 
+
  ### json
 | Name | Snippet(s) | Description |
 | --- | --- | --- |
@@ -97,6 +111,7 @@ Note that components that are marked as deprecated or experimental are not inclu
  ### php
 | Name | Snippet(s) | Description |
 | --- | --- | --- |
+| Admin Screen | `rw`,`screen` | Register a new admin screen 
 | Insert WordPress debug constants | `rw`,`wp`,`debug` | Inserts the WP_DEBUG and WP_DEBUG_LOG and other debug related constants. 
 | Enqueue a script from a plugin in the block editor | `rw`,`wp`,`php`,`enqueue-from-plugin` | Enqueues a script in the block editor stored in a plugin 
 | Enqueue a script from a theme in the block editor | `rw`,`wp`,`php`,`enqueue-from-plugin` | Enqueues a script in the block editor stored in a theme 

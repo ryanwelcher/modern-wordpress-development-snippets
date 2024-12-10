@@ -17,7 +17,7 @@
       "module.exports = {",
       "\t...defaultConfig,",
       "\tentry: {",
-      "\t\t...getWebpackEntryPoints(),",
+      "\t\t...defaultConfig.entry(),",
       "\t\t${1:entry}: \"${2:path}\"",
       "\t},",
       "};"

@@ -1,0 +1,17 @@
+---
+title: registerBlockVariation
+prefix: rw|variation
+description: Register a block variation
+---
+
+import { registerBlockVariation } from '@wordpress/blocks';
+
+registerBlockVariation( '${1:namespace/blockname}', {
+	name: 'paragraph-red',
+	title: 'Red Paragraph',
+	attributes: {
+		textColor: 'vivid-red',
+	},
+	isActive: [ 'textColor' ],
+	scope: [ 'inserter', 'blocks' ],
+} );

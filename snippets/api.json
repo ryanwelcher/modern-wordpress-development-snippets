@@ -1,0 +1,121 @@
+{
+  "registerBlockVariation": {
+    "prefix": [
+      "rw",
+      "variation"
+    ],
+    "description": "Register a block variation",
+    "body": [
+      "import { registerBlockVariation } from '@wordpress/blocks';",
+      "",
+      "registerBlockVariation( '${1:namespace/blockname}', {",
+      "\tname: 'paragraph-red',",
+      "\ttitle: 'Red Paragraph',",
+      "\tattributes: {",
+      "\t\ttextColor: 'vivid-red',",
+      "\t},",
+      "\tisActive: [ 'textColor' ],",
+      "\tscope: [ 'inserter', 'blocks' ],",
+      "} );"
+    ]
+  },
+  "DomReady": {
+    "prefix": [
+      "rw",
+      "domready"
+    ],
+    "description": "Setup domReady",
+    "body": [
+      "import domReady from '@wordpress/dom-ready';",
+      "",
+      "",
+      "domReady( () => {",
+      "\t// This code runs after the DOM is loaded.",
+      "} );"
+    ]
+  },
+  "registerFormatType": {
+    "prefix": [
+      "rw",
+      "format"
+    ],
+    "description": "Register a format type",
+    "body": [
+      "import { registerFormatType, toggleFormat } from '@wordpress/rich-text';",
+      "import { RichTextToolbarButton } from '@wordpress/block-editor';",
+      "",
+      "const MyCustomButton = ( { isActive, onChange, value } ) => {",
+      "\treturn (",
+      "\t\t<RichTextToolbarButton",
+      "\t\t\ticon=\"editor-code\"",
+      "\t\t\ttitle=\"Sample output\"",
+      "\t\t\tonClick={ () => {",
+      "\t\t\t\tonChange(",
+      "\t\t\t\t\ttoggleFormat( value, {",
+      "\t\t\t\t\t\ttype: 'my-custom-format/sample-output',",
+      "\t\t\t\t\t} )",
+      "\t\t\t\t);",
+      "\t\t\t} }",
+      "\t\t\tisActive={ isActive }",
+      "\t\t/>",
+      "\t);",
+      "};",
+      "",
+      "registerFormatType( '${1:format}', {",
+      "\ttitle: 'Sample output',",
+      "\ttagName: '${2:tag}',",
+      "\tclassName: '${1:class},",
+      "\tedit: MyCustomButton,",
+      "} );"
+    ]
+  },
+  "registerPlugin": {
+    "prefix": [
+      "rw",
+      "registerPlugin"
+    ],
+    "description": "Register a plugin for slotfill",
+    "body": [
+      "import { registerPlugin } from '@wordpress/plugins';",
+      "import {",
+      "\tPluginSidebar,",
+      "\tPluginSidebarMoreMenuItem,",
+      "\tPluginPrePublishPanel,",
+      "\tPluginPostStatusInfo,",
+      "\tPluginPostPublishPanel,",
+      "\tPluginMoreMenuItem,",
+      "\tPluginDocumentSettingPanel,",
+      "\tPluginBlockSettingsMenuItem,",
+      "} from '@wordpress/editor';",
+      "import { PanelBody } from '@wordpress/components';",
+      "",
+      "registerPlugin( '${1:plugin}', {",
+      "\trender: () => {},",
+      "} );"
+    ]
+  },
+  "Command Pallette": {
+    "prefix": [
+      "rw",
+      "command"
+    ],
+    "description": "Register a command",
+    "body": [
+      "import { store as commandsStore } from '@wordpress/commands';",
+      "import { dispatch, select } from '@wordpress/data';",
+      "import { __ } from '@wordpress/i18n';",
+      "",
+      "function doWork() {",
+      "}",
+      "",
+      "dispatch( commandsStore ).registerCommand( {",
+      "\tname: '${1:command name}',",
+      "\tlabel: __( '${1:label}' ),",
+      "\tcallback: ( { close } ) => {",
+      "\t\tdoWork();",
+      "\t\tclose();",
+      "\t},",
+      "} );"
+    ]
+  }
+}

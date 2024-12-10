@@ -1,0 +1,21 @@
+---
+title: registerPlugin
+prefix: rw|registerPlugin
+description: Register a plugin for slotfill
+---
+import { registerPlugin } from '@wordpress/plugins';
+import {
+	PluginSidebar,
+	PluginSidebarMoreMenuItem,
+	PluginPrePublishPanel,
+	PluginPostStatusInfo,
+	PluginPostPublishPanel,
+	PluginMoreMenuItem,
+	PluginDocumentSettingPanel,
+	PluginBlockSettingsMenuItem,
+} from '@wordpress/editor';
+import { PanelBody } from '@wordpress/components';
+
+registerPlugin( '${1:plugin}', {
+	render: () => {},
+} );

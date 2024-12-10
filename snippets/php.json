@@ -1,4 +1,39 @@
 {
+  "Admin Screen": {
+    "prefix": [
+      "rw",
+      "screen"
+    ],
+    "description": "Register a new admin screen",
+    "body": [
+      "/**",
+      " * Registers the settings pave",
+      " */",
+      "function register_plugin_settings_page() {",
+      "\tadd_menu_page(",
+      "\t\t__( '${1:name}' ),",
+      "\t\t__( '${1:name}' ),",
+      "\t\t'manage_options',",
+      "\t\t'${1:page-slug}',",
+      "\t\t__NAMESPACE__ . '\\render_settings_page',",
+      "\t\t'dashicons-yes'",
+      "\t);",
+      "}",
+      "",
+      "add_action( 'admin_menu', __NAMESPACE__ . '\\register_plugin_settings_page' );",
+      "",
+      "/**",
+      " * Renders the settings page",
+      " */",
+      "function render_settings_page() {",
+      "\t?>",
+      "\t<div id=\"${1:page-slug}\">",
+      "\t\tPage Content",
+      "\t</div>",
+      "\t<?php",
+      "}"
+    ]
+  },
   "Insert WordPress debug constants": {
     "prefix": [
       "rw",

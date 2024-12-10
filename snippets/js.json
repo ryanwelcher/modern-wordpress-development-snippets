@@ -1,0 +1,22 @@
+{
+  "requestAnimationFrame": {
+    "prefix": [
+      "rw",
+      "animate"
+    ],
+    "description": "requestAnimationFrame",
+    "body": [
+      "function loop() {",
+      "\t// Work to be done each loop.",
+      "",
+      "\t// Update this to be a real condition",
+      "\tif ( true ) {",
+      "\t\trequestAnimationFrame( showTime );",
+      "\t}",
+      "}",
+      "",
+      "// kick it all off",
+      "requestAnimationFrame( loop );"
+    ]
+  }
+}

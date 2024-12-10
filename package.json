@@ -49,6 +49,22 @@
 			},
 			{
 				"language": "javascript",
+				"path": "./snippets/js.json"
+			},
+			{
+				"language": "javascriptreact",
+				"path": "./snippets/js.json"
+			},
+			{
+				"language": "typescript",
+				"path": "./snippets/js.json"
+			},
+			{
+				"language": "typescriptreact",
+				"path": "./snippets/js.json"
+			},
+			{
+				"language": "javascript",
 				"path": "./snippets/data.json"
 			},
 			{
@@ -62,6 +78,22 @@
 			{
 				"language": "typescriptreact",
 				"path": "./snippets/data.json"
+			},
+			{
+				"language": "javascript",
+				"path": "./snippets/api.json"
+			},
+			{
+				"language": "javascriptreact",
+				"path": "./snippets/api.json"
+			},
+			{
+				"language": "typescript",
+				"path": "./snippets/api.json"
+			},
+			{
+				"language": "typescriptreact",
+				"path": "./snippets/api.json"
 			},
 			{
 				"language": "jsx",

@@ -1,0 +1,33 @@
+---
+title: registerFormatType
+prefix: rw|format
+description: Register a format type
+---
+
+import { registerFormatType, toggleFormat } from '@wordpress/rich-text';
+import { RichTextToolbarButton } from '@wordpress/block-editor';
+
+const MyCustomButton = ( { isActive, onChange, value } ) => {
+	return (
+		<RichTextToolbarButton
+			icon="editor-code"
+			title="Sample output"
+			onClick={ () => {
+				onChange(
+					toggleFormat( value, {
+						type: 'my-custom-format/sample-output',
+					} )
+				);
+			} }
+			isActive={ isActive }
+		/>
+	);
+};
+
+registerFormatType( '${1:format}', {
+	title: 'Sample output',
+	tagName: '${2:tag}',
+	className: '${1:class},
+	edit: MyCustomButton,
+} );
+

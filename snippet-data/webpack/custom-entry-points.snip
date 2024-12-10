@@ -14,7 +14,7 @@ $LINE_COMMENT Add any a new entry point by extending the webpack config.
 module.exports = {
 	...defaultConfig,
 	entry: {
-		...getWebpackEntryPoints(),
+		...defaultConfig.entry(),
 		${1:entry}: "${2:path}"
 	},
 };
